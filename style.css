@@ -275,6 +275,7 @@ img.aligncenter {
 
 .page-content .header-elements {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #e3e3e3;
     padding-bottom: 1rem;
@@ -295,11 +296,50 @@ img.aligncenter {
     margin: 0;
     text-transform: uppercase;
     font-size: 2rem;
+    letter-spacing: -1px;
 }
 
 .page-content .header-elements img {
     max-width: 2.4rem;
     margin-right: .5rem;
+}
+
+.page-content .header-elements-left, .page-content .header-elements-right {
+    display: flex;
+}
+
+.header-elements .single-post-date {
+
+    color:#888a92;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.header-elements .single-post-date p {
+    margin:0;
+    font-size:12px;
+}
+
+.header-elements .single-post-date span {
+    color:#3b3f4f;
+    border-bottom:1px solid #888a92;
+    font-weight: 500;
+    margin-left: 5px;
+}
+
+.header-elements-right .post-share {
+    display: flex;
+    align-items: center;
+}
+
+.header-elements-right .post-share a {
+    display: flex;
+    align-items: center;
+}
+
+.header-elements-right .post-share img {
+    max-width: 32px;
 }
 
 /* Footer */
