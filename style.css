@@ -413,8 +413,20 @@ img.aligncenter {
     background-image: url(dist/img/header.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 10rem 0;
+    padding: 4.5rem 0;
     text-align: center;
+}
+
+@media (min-width:1500px) {
+    .front-page-head {
+        padding:9rem 0;
+    }
+}
+
+@media (min-width:1800px) {
+    .front-page-head {
+        padding:15rem 0;
+    }
 }
 
 .front-page-head .text-main {
@@ -434,14 +446,6 @@ img.aligncenter {
     display: inline-block;
     margin-left: 420px;
 }
-
-@media (max-width:1449px) {
-    .front-page-head {
-        background-position-x: -130px;
-    }
-}
-
-
 
 .front-page-head .text-secondary {
     color: #fff;
