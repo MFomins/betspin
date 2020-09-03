@@ -263,7 +263,7 @@ img.aligncenter {
     position: relative;
 }
 
-.current-menu-item:after {
+.navbar .current-menu-item:after {
     content: "";
     position: absolute;
     bottom: -20px;
