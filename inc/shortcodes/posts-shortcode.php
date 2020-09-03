@@ -4,6 +4,10 @@ add_shortcode('betspin_posts', 'show_posts');
 
 function show_posts($atts)
 {
+    $atts = array(
+        
+    );
+
     $loop_args = array(
         'post_type' => 'post',
         'posts_per_page' => get_option('posts_per_page'),

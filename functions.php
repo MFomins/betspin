@@ -122,7 +122,6 @@ function betspin_add_menus()
 {
     register_nav_menus(array(
         'main-menu' => 'Main Menu',
-        'button-menu' => 'Button Menu / Side navigation',
         'footer-1' => 'Footer Menu 1',
         'footer-2' => 'Footer Menu 2',
         'footer-3' => 'Footer Menu 3',

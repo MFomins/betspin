@@ -95,9 +95,17 @@ a {
 
 ul {
     list-style-type: none;
-    padding: 0 0 0 4rem;
+    padding: 0 0 0 3rem;
     margin: 0 0 2rem;
     font-size: 1.4rem;
+}
+
+.page-content ul li {
+    background-image: url('dist/img/tick.png');
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 25px;
+    /* Adjust according to image size to push text across. */
 }
 
 ol {
@@ -110,15 +118,6 @@ ol {
     max-width: 100%;
     margin: 0 auto;
     padding: 0 1.5rem;
-}
-
-.section {
-    padding: 3rem 0;
-}
-
-.section ul {
-    list-style: disc;
-    padding-left: 1.5rem;
 }
 
 img {
@@ -251,7 +250,7 @@ img.aligncenter {
 
 .navbar .nav-login i {
     color: #9e9e9e;
-    font-size:2rem
+    font-size: 2rem
 }
 
 .navbar .navigation .menu {
@@ -296,7 +295,7 @@ img.aligncenter {
     content: "";
     position: absolute;
     bottom: -1px;
-    width: 10%;
+    width: 15%;
     height: 3px;
     background: #ce2029;
 }
@@ -318,37 +317,40 @@ img.aligncenter {
 }
 
 .header-elements .single-post-date {
-
-    color:#888a92;
+    color: #888a92;
     display: flex;
     align-items: center;
     margin-right: 10px;
 }
 
 .header-elements .single-post-date p {
-    margin:0;
-    font-size:12px;
+    margin: 0;
+    font-size: 12px;
 }
 
 .header-elements .single-post-date span {
-    color:#3b3f4f;
-    border-bottom:1px solid #888a92;
+    color: #3b3f4f;
+    border-bottom: 1px solid #888a92;
     font-weight: 500;
     margin-left: 5px;
 }
 
-.header-elements-right .post-share {
+.page-content .post-share {
     display: flex;
     align-items: center;
 }
 
-.header-elements-right .post-share a {
+.page-content .post-share a {
     display: flex;
     align-items: center;
 }
 
-.header-elements-right .post-share img {
+.page-content .post-share img {
     max-width: 32px;
+}
+
+.page-content .post-share.share-bottom a {
+    margin-right: 10px;
 }
 
 /* Footer */
@@ -527,11 +529,11 @@ img.aligncenter {
     flex: 0 0 24%;
     border: 1px solid #d0d0d0;
     border-radius: .5rem;
-    margin-right: 20px;
+    margin-right: 1rem;
 }
 
 .post-info-wrap .post-info {
-    padding: 1rem 2rem;
+    padding: .5rem 1.5rem;
 }
 
 .post-info-wrap .post-thumb img {
@@ -541,28 +543,57 @@ img.aligncenter {
 
 .post-info-wrap .post-title {
     font-weight: 500;
-    line-height: 1.5rem;
-    margin-bottom: 1rem;
+    line-height: 1.8rem;
+    font-size: 1.8rem;
     color: #3b3f4f;
 }
 
 .post-info-wrap .post-date {
     color: #ce2029;
     font-weight: bold;
-    line-height: 0;
     font-size: 1.3rem;
-    margin-bottom: 1.5rem;
+    line-height: 2rem;
 }
 
 .post-info-wrap .post-excerpt p {
     color: #3b3f4f;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
 }
 
 .post-info-wrap .post-tags a {
     color: #fff;
     background-color: #ce2029;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     padding: .3rem;
     border-radius: .5rem;
+}
+
+/* Related posts for blog pages */
+
+.post-related-posts {
+    margin-top: 30px;
+}
+
+.post-related-posts h2 {
+    margin: 0;
+    border-bottom: 1px solid #e3e3e3;
+    position: relative;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+.post-related-posts h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 15%;
+    height: 3px;
+    background: #ce2029;
+}
+
+.post-related-posts .post-info-wrap {
+    flex: 0 0 32.5%;
 }
