@@ -54,9 +54,6 @@ if (function_exists('acf_add_options_page')) {
 //Include ACF fields
 require_once BETSPIN_TEMPLATE_DIR . '/inc/acf-fields.php';
 
-//Include widget
-require_once BETSPIN_TEMPLATE_DIR . '/inc/widgets/betspin-widget-show-post.php';
-
 //Include shortcode
 require_once BETSPIN_TEMPLATE_DIR . '/inc/shortcodes/posts-shortcode.php';
 
