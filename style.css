@@ -370,12 +370,12 @@ img.aligncenter {
     color: #fff;
     text-transform: uppercase;
     font-weight: 400;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
 }
 
 .site-footer .footer-col a {
     color: #fff;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 .site-footer .menu {
@@ -403,7 +403,7 @@ img.aligncenter {
 .site-footer .footer-text-field {
     color: #fff;
     line-height: 2rem;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     text-align: center;
 }
 
@@ -418,26 +418,34 @@ img.aligncenter {
 }
 
 .front-page-head .text-main {
-    font-size: 3.6rem;
+    font-size: 4.5rem;
     color: #fff;
-    line-height: 4.5rem;
+    line-height: 6rem;
 }
 
 .front-page-head .text-main span {
     color: #ce2029;
     display: block;
-    font-size: 5.9rem;
+    font-size: 7.5rem;
     letter-spacing: .3rem;
 }
 
 .front-page-head .head-info-wrap {
     display: inline-block;
-    margin-left: 470px;
+    margin-left: 420px;
 }
+
+@media (max-width:1449px) {
+    .front-page-head {
+        background-position-x: -130px;
+    }
+}
+
+
 
 .front-page-head .text-secondary {
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 1.9rem;
     line-height: 2.5rem;
     padding: 2rem 0;
 }
@@ -516,6 +524,7 @@ img.aligncenter {
 
 .sidebar {
     flex: 0 0 25%;
+    margin-top: 40px;
 }
 
 /* Posts Shortcode */
