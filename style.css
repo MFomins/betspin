@@ -120,6 +120,15 @@ ol {
     padding: 0 1.5rem;
 }
 
+@media (max-width:1200px) {
+    .container {
+        width: 110rem;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -419,13 +428,13 @@ img.aligncenter {
 
 @media (min-width:1500px) {
     .front-page-head {
-        padding:9rem 0;
+        padding: 9rem 0;
     }
 }
 
 @media (min-width:1800px) {
     .front-page-head {
-        padding:15rem 0;
+        padding: 15rem 0;
     }
 }
 
