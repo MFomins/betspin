@@ -4,7 +4,7 @@
     </div>
     <div class="post-info">
         <div class="post-title">
-            <?php the_title(); ?>
+            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
         </div>
         <div class="post-date">
             <?php the_date("d/m/y"); ?>

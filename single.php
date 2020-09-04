@@ -35,14 +35,13 @@
             </a>
         </div>
         <div class="post-related-posts">
-            <h2>Related Blog posts</h2>
-            <?php echo do_shortcode('[betspin_posts]'); ?>
+            <h2 class="custom-heading">Related Blog posts</h2>
+            <?php echo do_shortcode('[betspin_posts limit=3]'); ?>
         </div>
     </div>
     <div class="sidebar">
         <?php get_sidebar(); ?>
     </div>
 </main>
-
 
 <?php get_footer(); ?>

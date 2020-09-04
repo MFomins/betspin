@@ -4,13 +4,18 @@ add_shortcode('betspin_posts', 'show_posts');
 
 function show_posts($atts)
 {
-    $atts = array(
-        
+    $atts = shortcode_atts(
+        array(
+            'limit' => get_option('posts_per_page'),
+        ),
+        $atts,
+        'show_posts'
     );
+
 
     $loop_args = array(
         'post_type' => 'post',
-        'posts_per_page' => get_option('posts_per_page'),
+        'posts_per_page' => $atts['limit'],
     );
 
     $loop = new WP_Query($loop_args);
