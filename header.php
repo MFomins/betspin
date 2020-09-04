@@ -9,7 +9,7 @@
 
 <body <?php body_class(); ?>>
     <header class="site-header">
-        <div class="navbar container">
+        <div class="navbar container hidden">
             <div class="logo">
                 <a href="<?php echo home_url(); ?>"><?php the_custom_logo(); ?></a>
             </div>
@@ -29,6 +29,27 @@
                 <div class="search-icon"><i class="icon-search"></i></div>
                 <div class="login-btn">
                     <span>Login</span>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-menu">
+            <div class="mobile-nav container">
+                <div class="mobile-left">
+                    <div class="logo">
+                        <a href="<?php echo home_url(); ?>"><?php the_custom_logo(); ?></a>
+                    </div>
+                </div>
+                <div class="mobile-right">
+                    <div class="search-icon"><i class="icon-search"></i></div>
+                    <div class="login-btn">
+                        <span>Login</span>
+                    </div>
+                    <div id="nav-icon" class="hamburger-menu toggle-button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
             </div>
         </div>
