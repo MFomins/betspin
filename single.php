@@ -6,7 +6,7 @@
             <div class="post-content">
                 <div class="header-elements">
                     <div class="header-elements-left">
-                        <img src="<?php echo BETSPIN_DIR_URI . "/dist/img/header-cards.png"; ?>" alt="Cards">
+                        <img src="<?php echo BETSPIN_DIR_URI . "/dist/img/live-casinos.png"; ?>" alt="Cards">
                         <h2><?php echo the_title(); ?></h2>
                     </div>
                     <div class="header-elements-right">

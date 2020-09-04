@@ -147,8 +147,8 @@ img {
 }
 
 .custom-header img {
-    max-width: 3.2rem;
-    margin-right: 1.2rem;
+    max-width: 3.4rem;
+    margin-right: 1rem;
 }
 
 .custom-header:after {
@@ -343,12 +343,13 @@ img.aligncenter {
 }
 
 .page-content .header-elements img {
-    max-width: 2.4rem;
-    margin-right: .5rem;
+    max-width: 3.4rem;
+    margin-right: 1rem;
 }
 
 .page-content .header-elements-left, .page-content .header-elements-right {
     display: flex;
+    align-items: center;
 }
 
 .header-elements .single-post-date {

@@ -21,7 +21,7 @@
     <div class="page-content">
         <?php if (!is_front_page()) : ?>
             <div class="header-elements">
-                <img src="<?php echo BETSPIN_DIR_URI . "/dist/img/header-cards.png" ?>" alt="Cards">
+                <img src="<?php echo BETSPIN_DIR_URI . "/dist/img/live-casinos.png" ?>" alt="Cards">
                 <h2><?php echo the_title(); ?></h2>
             </div>
         <?php endif; ?>
