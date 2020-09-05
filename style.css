@@ -526,6 +526,23 @@ img.aligncenter {
     .site-footer .footer-wrap .footer-menus {
         flex-wrap: wrap;
     }
+    .footer-img-wrap {
+        flex: 0 0 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+
+    .site-footer .responsible-gaming img {
+        margin:0;
+        max-height: 5.5rem;
+    }
+
+    span.rights {
+        padding:2rem;
+        font-size:2rem!important;
+    }
+
     .footer-col {
         flex: 0 0 100%;
         display: flex;
@@ -539,12 +556,7 @@ img.aligncenter {
         flex-wrap: wrap;
         justify-content: center;
     }
-    .site-footer .responsible-gaming img {
-        width: 100px;
-        height: 50px;
-        object-fit: contain;
-        margin: 0;
-    }
+
 }
 
 /* Front page header block */
