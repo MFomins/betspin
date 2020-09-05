@@ -95,17 +95,27 @@ a {
 
 ul {
     list-style-type: none;
-    padding: 0 0 0 3rem;
+    padding: 0 0 0 5rem;
     margin: 0 0 2rem;
     font-size: 1.4rem;
 }
 
 .page-content ul li {
-    background-image: url('dist/img/tick.png');
-    background-position: left center;
-    background-repeat: no-repeat;
-    padding-left: 25px;
-    /* Adjust according to image size to push text across. */
+    position: relative;
+}
+
+.page-content ul li:before {
+    background-image: url('dist/img/red-check.png');
+    content: '';
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    left: -2.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+
 }
 
 ol {
