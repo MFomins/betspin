@@ -585,12 +585,6 @@ img.aligncenter {
     }
 }
 
-@media (min-width:1800px) {
-    .front-page-head {
-        padding: 15rem 0;
-    }
-}
-
 .front-page-head .text-main {
     font-size: 4.5rem;
     color: #fff;
