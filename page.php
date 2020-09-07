@@ -7,7 +7,7 @@
                 <div class="text-secondary">BLACKJACK ● ROULETTE ● BACCARAT ● CARRIBEAN STUD </br> THREE CARD POKER ● HOLD'EM ● PREMIUM ROULETTE</div>
                 <div class="homepage-button">
                     <div class="btn-left">
-                        <img src="<?php echo BETSPIN_DIR_URI . "/dist/img/casino-roulette.png" ?>" alt="">
+                        <img src="<?php echo BETSPIN_DIR_URI . "/dist/img/explore.png" ?>" alt="">
                     </div>
                     <div class="btn-right">
                         <a href="#"> <i class="icon-right-open"></i> START EXPLORING</a>
