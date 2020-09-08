@@ -29,6 +29,8 @@ function show_posts($atts)
 
             $loop->the_post();
 
+            include BETSPIN_TEMPLATE_DIR . '/inc/shortcodes/posts-shortcode-content.php';
+
         endwhile;
         wp_reset_postdata();
         ?>
