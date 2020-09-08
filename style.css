@@ -128,11 +128,12 @@ ol {
     margin: 0 auto;
 }
 
-@media (max-width:1200px) {
+@media (max-width:767px) {
     .container {
         width: 110rem;
         max-width: 100%;
         margin: 0 auto;
+        padding:0 1.5rem;
     }
 }
 
