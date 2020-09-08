@@ -133,7 +133,7 @@ ol {
         width: 110rem;
         max-width: 100%;
         margin: 0 auto;
-        padding:0 1.5rem;
+        padding: 0 1.5rem;
     }
 }
 
@@ -617,7 +617,7 @@ img.aligncenter {
     border-right: 1px solid #1c9a25;
     display: flex;
     align-items: center;
-    padding:1.2rem 1rem;
+    padding: 1.2rem 1rem;
 }
 
 .front-page-head .homepage-button .btn-left img {
@@ -627,7 +627,7 @@ img.aligncenter {
 .front-page-head .homepage-button .btn-right {
     display: flex;
     background-color: #2dbf38;
-    padding:.4rem 5rem .4rem 4rem;
+    padding: .4rem 5rem .4rem 4rem;
     border-radius: 0 .3rem .3rem 0;
 }
 
@@ -638,7 +638,7 @@ img.aligncenter {
 .front-page-head .homepage-button .btn-right a {
     color: #fff;
     font-weight: 500;
-    font-size:2rem;
+    font-size: 2rem;
 }
 
 @media (max-width:767px) {
@@ -781,6 +781,7 @@ img.aligncenter {
     padding: .3rem;
     border-radius: .5rem;
     margin-right: .3rem;
+    white-space: nowrap;
 }
 
 /* Related posts for blog pages */
@@ -822,5 +823,114 @@ img.aligncenter {
     .post-info-wrap, .post-related-posts .post-info-wrap {
         flex: 0 0 100%;
         margin: 0 0 2rem 0;
+    }
+}
+
+/* Casino deal block */
+
+.casino-deal-block {
+    background: #ef4845;
+    color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 3px;
+    margin: 20px 0;
+}
+
+.deal-wrap {
+    padding: 30px 100px 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.deal-row {
+    font-size: 2.7rem;
+    line-height: 3.8rem;
+}
+
+.deal-row span {
+    font-weight: bold;
+    font-size: 4.2rem;
+}
+
+.deal-row:nth-child(4) span {
+    font-size: 2.7rem;
+}
+
+@media (max-width:767px) {
+    .casino-deal-block {
+        justify-content: center;
+    }
+
+    .deal-wrap {
+        padding:10px;
+    }
+
+    .deal-row {
+        font-size:2rem;
+    }
+
+    .deal-row span {
+        font-size:2.5rem;
+    }
+
+    .deal-row:nth-child(4) span {
+        font-size: 2.5rem;
+    }
+}
+
+/* Deposit block shortcode */
+
+.casino-deposit-block {
+    background: #000;
+    color: #fff;
+    padding:15px 0 30px;
+}
+
+.deposit-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.deposit-row {
+    font-size: 4rem;
+    line-height: 4rem;
+}
+
+.deposit-row span {
+    color:#ce2029;
+}
+
+.deposit-row:first-child {
+    font-size: 2rem;
+}
+
+.deposit-row a {
+    color:#fff;
+    font-size: 1.8rem;
+    letter-spacing: -1px;
+    background:#2dbf38;
+    padding:8px 80px;
+    border-radius: 3px;
+}
+
+.deposit-row:last-child {
+    margin-top:10px;
+}
+
+@media (max-width:767px) {
+    .deposit-row:first-child {
+        font-size: 1.6rem;
+    }
+
+    .deposit-row {
+        font-size: 1.9rem;
+    }
+
+    .deposit-row span {
+        font-weight: bold;
     }
 }

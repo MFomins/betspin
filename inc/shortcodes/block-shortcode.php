@@ -7,16 +7,9 @@ function casino_block($atts)
     ob_start();
 ?>
 
-    <div class="casino-blokc">
+    <div class="casino-deal-block">
         <?php
-        while ($loop->have_posts()) :
-
-            $loop->the_post();
-
-            echo 'asd';
-
-        endwhile;
-        wp_reset_postdata();
+        include BETSPIN_TEMPLATE_DIR . '/inc/shortcodes/blocks/casino-deal-block.php';
         ?>
     </div>
 
