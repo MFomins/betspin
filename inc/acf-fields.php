@@ -1,5 +1,26 @@
 <?php
 
+add_action('acf/init', 'my_acf_init_block_types');
+
+function my_acf_init_block_types()
+{
+
+    // Check function exists.
+    if (function_exists('acf_register_block_type')) {
+
+        // register casino games block.
+        acf_register_block_type(array(
+            'name'              => 'casino-games',
+            'title'             => __('Casino games'),
+            'description'       => __('Custom casino games block'),
+            'render_template'   => 'inc/acf-blocks/testimonial.php',
+            'category'          => 'formatting',
+            'icon'              => 'images-alt',
+            'keywords'          => array('casino-games', 'casino'),
+        ));
+    }
+}
+
 if (function_exists('acf_add_local_field_group')) :
 
     acf_add_local_field_group(array(
