@@ -862,19 +862,15 @@ img.aligncenter {
     .casino-deal-block {
         justify-content: center;
     }
-
     .deal-wrap {
-        padding:10px;
+        padding: 10px;
     }
-
     .deal-row {
-        font-size:2rem;
+        font-size: 2rem;
     }
-
     .deal-row span {
-        font-size:2.5rem;
+        font-size: 2.5rem;
     }
-
     .deal-row:nth-child(4) span {
         font-size: 2.5rem;
     }
@@ -885,7 +881,7 @@ img.aligncenter {
 .casino-deposit-block {
     background: #000;
     color: #fff;
-    padding:15px 0 30px;
+    padding: 15px 0 30px;
 }
 
 .deposit-wrap {
@@ -901,7 +897,7 @@ img.aligncenter {
 }
 
 .deposit-row span {
-    color:#ce2029;
+    color: #ce2029;
 }
 
 .deposit-row:first-child {
@@ -909,28 +905,66 @@ img.aligncenter {
 }
 
 .deposit-row a {
-    color:#fff;
+    color: #fff;
     font-size: 1.8rem;
     letter-spacing: -1px;
-    background:#2dbf38;
-    padding:8px 80px;
+    background: #2dbf38;
+    padding: 8px 80px;
     border-radius: 3px;
 }
 
 .deposit-row:last-child {
-    margin-top:10px;
+    margin-top: 10px;
 }
 
 @media (max-width:767px) {
     .deposit-row:first-child {
         font-size: 1.6rem;
     }
-
     .deposit-row {
         font-size: 1.9rem;
     }
-
     .deposit-row span {
         font-weight: bold;
+    }
+}
+
+/* Gutenberg blocks */
+
+.g-block-wrap {
+    float: left;
+    width: 24.123%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    border: 1px solid #888a92;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+}
+
+.g-block-header h4 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.g-block-text p {
+    margin: 0;
+    line-height: 2rem;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.g-block-wrap:not(:last-child) {
+    margin-right: 10px;
+}
+
+@media (max-width:767px) {
+    .g-block-wrap {
+        width: 99%;
+        margin: 10px 0!important;
     }
 }
