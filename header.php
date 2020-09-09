@@ -27,9 +27,6 @@
             </div>
             <div class="nav-login">
                 <div class="search-icon"><i class="icon-search"></i></div>
-                <div class="login-btn">
-                    <span>Login</span>
-                </div>
             </div>
         </div>
         <div class="mobile-menu">
@@ -41,9 +38,6 @@
                 </div>
                 <div class="mobile-right">
                     <div class="search-icon"><i class="icon-search"></i></div>
-                    <div class="login-btn">
-                        <span>Login</span>
-                    </div>
                     <div id="nav-icon" class="hamburger-menu toggle-button">
                         <span></span>
                         <span></span>
