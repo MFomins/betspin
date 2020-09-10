@@ -10,7 +10,7 @@
                         <img src="<?php echo BETSPIN_DIR_URI . "/dist/img/explore.png" ?>" alt="">
                     </div>
                     <div class="btn-right">
-                        <a href="#"> <i class="icon-down-open"></i> START EXPLORING</a>
+                        <a href="#live-roulette"> <i class="icon-down-open"></i> START EXPLORING</a>
                     </div>
                 </div>
             </div>
