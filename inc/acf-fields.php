@@ -18,6 +18,17 @@ function my_acf_init_block_types()
             'icon'              => 'images-alt',
             'keywords'          => array('casino-games', 'casino'),
         ));
+
+        // register casino games block.
+        acf_register_block_type(array(
+            'name'              => 'games-block',
+            'title'             => __('Games block'),
+            'description'       => __('Custom games block'),
+            'render_template'   => 'inc/acf-blocks/games-block.php',
+            'category'          => 'formatting',
+            'icon'              => 'admin-comments',
+            'keywords'          => array('games-block'),
+        ));
     }
 }
 

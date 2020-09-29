@@ -977,3 +977,53 @@ img.aligncenter {
         margin: 10px 0!important;
     }
 }
+
+
+.games-block-item {
+    width: 23.666%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background: #ce2029;
+    display: inline-block;
+    border-radius: 3px;
+}
+
+.games-block-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.games-block-img img {
+    width: 150px;
+    height: 130px;
+    object-fit: contain;
+}
+
+.games-block-header h4 {
+    margin: 0;
+    font-size: 2rem;
+    color:#fff;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.games-block-text p {
+    margin: 0;
+    line-height: 2rem;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.games-block-item:not(:last-child) {
+    margin-right: 10px;
+}
+
+@media (max-width:767px) {
+    .games-block-item {
+        width: 99%;
+        margin: 10px 0!important;
+    }
+}
