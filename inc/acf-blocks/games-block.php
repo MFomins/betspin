@@ -8,7 +8,7 @@
             ?>
         </div>
         <div class="games-block-header">
-            <h4><?php the_field('betspin_games_header'); ?></h4>
+            <a href="<?php the_field('betspin_games_page'); ?>"><?php the_field('betspin_games_header'); ?></a>
         </div>
     </div>
 </div>
