@@ -3,14 +3,14 @@
     <div class="front-page-head">
         <div class="head-info-text container">
             <div class="head-info-wrap">
-                <div class="text-main">EXPLORE THE WORLD OF <span>LIVE CASINOS</span></div>
-                <div class="text-secondary">BLACKJACK ● ROULETTE ● BACCARAT ● CARRIBEAN STUD </br> THREE CARD POKER ● HOLD'EM ● PREMIUM ROULETTE</div>
+                <div class="text-main"><span>LIVE CASINOS</span></div>
+                <div class="text-secondary">Play live games and feel the same <br> exitement as if you sat in real casino</div>
                 <div class="homepage-button">
                     <div class="btn-left">
                         <img src="<?php echo BETSPIN_DIR_URI . "/dist/img/explore.png" ?>" alt="">
                     </div>
                     <div class="btn-right">
-                        <a href="#live-roulette"> <i class="icon-down-open"></i> START EXPLORING</a>
+                        <a href="#live-roulette"> <i class="icon-down-open"></i> Get your seat at the table</a>
                     </div>
                 </div>
             </div>

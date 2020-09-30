@@ -566,17 +566,12 @@ img.aligncenter {
 /* Front page header block */
 
 .front-page-head {
-    background-image: url(dist/img/header.jpg);
+    /* background-image: url(dist/img/header.jpg); */
+    background-color: #333;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 4.5rem 0;
+    padding: 20rem 0 4rem;
     text-align: center;
-}
-
-@media (min-width:1500px) {
-    .front-page-head {
-        padding: 9rem 0;
-    }
 }
 
 .front-page-head .text-main {
@@ -587,21 +582,16 @@ img.aligncenter {
 
 .front-page-head .text-main span {
     color: #ce2029;
-    display: block;
-    font-size: 7.5rem;
-    letter-spacing: .3rem;
-}
-
-.front-page-head .head-info-wrap {
-    display: inline-block;
-    margin-left: 420px;
+    font-size: 6rem;
+    font-weight: 500;
 }
 
 .front-page-head .text-secondary {
     color: #fff;
+    text-transform: uppercase;
     font-size: 1.9rem;
     line-height: 2.5rem;
-    padding: 2rem 0;
+    margin-bottom: 2rem;
 }
 
 .front-page-head .homepage-button {
@@ -637,6 +627,7 @@ img.aligncenter {
 
 .front-page-head .homepage-button .btn-right a {
     color: #fff;
+    text-transform: uppercase;
     font-weight: 500;
     font-size: 2rem;
 }
@@ -978,7 +969,6 @@ img.aligncenter {
     }
 }
 
-
 .games-block-item {
     width: 23.666%;
     margin-bottom: 2rem;
@@ -1010,10 +1000,9 @@ img.aligncenter {
 .games-block-header a {
     margin: 0;
     font-size: 2rem;
-    color:#fff;
+    color: #fff;
     font-weight: normal;
     text-transform: uppercase;
-
 }
 
 .games-block-text p {
@@ -1031,5 +1020,134 @@ img.aligncenter {
     .games-block-item {
         width: 99%;
         margin: 10px 0!important;
+    }
+}
+
+/* Signup form styles */
+
+::-webkit-input-placeholder {
+    font-style: italic;
+}
+
+:-moz-placeholder {
+    font-style: italic;
+}
+
+::-moz-placeholder {
+    font-style: italic;
+}
+
+:-ms-input-placeholder {
+    font-style: italic;
+}
+
+.btsform {
+    margin-left: calc(-100vw / 2 + 115rem / 2);
+    margin-right: calc(-100vw / 2 + 115rem / 2);
+    background: #282828;
+    padding: 40px 0 20px;
+}
+
+.bts-form-wrap {
+    width: 60%;
+}
+
+.btsform .bts-input-wrap p, .btsform .bts-terms p {
+    margin: 0;
+}
+
+.btsform .bts-input-wrap p:first-child {
+    margin-right: 20px;
+}
+
+.bts-input-wrap {
+    display: flex;
+    padding: 10px 0;
+}
+
+.form-head {
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+    line-height: 6rem;
+    letter-spacing: -1px;
+}
+
+.form-head span {
+    display: block;
+    color: #ce2029;
+    font-size: 5.6rem;
+}
+
+.btsform input {
+    padding: 15px;
+    border: none;
+    border-radius: 3px;
+}
+
+.btsform input[type=text] {
+    width: 370px;
+}
+
+.btsform input[type=submit] {
+    color: #fff;
+    background: #2dbf38;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.bts-input-wrap {
+    color: #fff;
+}
+
+.bts-input-wrap input[type=checkbox] {
+    margin-right: 10px;
+    border-radius: 13px;
+    border: none;
+}
+
+.btsform .bts-terms {
+    margin-top: 30px;
+}
+
+.btsform .bts-terms p {
+    font-size: 12px;
+    font-style: italic;
+    color: #999;
+}
+
+@media (max-width:767px) {
+    .btsform {
+        margin-left: -1.5rem;
+        margin-right: -1.5rem;
+    }
+    .form-head {
+        font-size: 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .form-head span {
+        font-size: 4.2rem;
+    }
+    .bts-form-wrap {
+        width: 100%;
+    }
+    .bts-input-wrap {
+        flex-direction: column;
+    }
+    .btsform input[type=text] {
+        width: 100%;
+    }
+    .btsform .bts-input-wrap p:first-child {
+        margin-bottom: 10px;
+    }
+    p.bts-input-container {
+        display: flex;
+        justify-content: center;
+    }
+    .btsform input[type=submit] {
+        margin-top: 20px;
     }
 }
