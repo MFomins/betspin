@@ -36,7 +36,7 @@
         </div>
         <div class="post-related-posts">
             <h2 class="custom-header"><img src="<?php echo BETSPIN_DIR_URI . "/dist/img/blog.png"; ?>" alt="Blog image">Related Blog posts</h2>
-            <?php echo do_shortcode('[betspin_posts limit=3]'); ?>
+            <?php echo do_shortcode('[betspin_related_posts]'); ?>
         </div>
     </div>
     <div class="sidebar">
