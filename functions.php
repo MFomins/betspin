@@ -32,21 +32,9 @@ add_filter('acf/settings/show_admin', 'my_acf_show_admin');
 
 function my_acf_show_admin($show)
 {
-
     return true;
 }
 
-//Create ACF Theme Options page
-if (function_exists('acf_add_options_page')) {
-
-    acf_add_options_page(array(
-        'page_title'     => 'Theme General Settings',
-        'menu_title'    => 'Theme Settings',
-        'menu_slug'     => 'theme-general-settings',
-        'capability'    => 'edit_posts',
-        'redirect'        => false
-    ));
-}
 /*=============================================
 =            END ACF			            =
 =============================================*/
@@ -114,7 +102,7 @@ function betspin_scripts()
     wp_enqueue_style('fontello', BETSPIN_DIR_URI . '/dist/css/fontello/fontello-embedded.css', array(), '1.0.0');
 
     //Main stylesheet
-    wp_enqueue_style('betspin-main', get_stylesheet_uri(), array('normalize'), '1.0.38');
+    wp_enqueue_style('betspin-main', get_stylesheet_uri(), array('normalize'), '1.0.39');
 
     /** Load main JavaScript files */
     wp_enqueue_script('betspin-scripts', BETSPIN_DIR_URI . '/dist/js/scripts.js', array('jquery'), '1.0.0', true);

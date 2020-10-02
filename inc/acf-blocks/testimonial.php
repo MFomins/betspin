@@ -1,17 +1,20 @@
-<div class="g-block-item">
-    <div class="g-block-wrap">
-        <div class="g-block-img">
-            <?php
-            $image = get_field('betspin_block_image');
+<div class="g-block-items">
+    <?php
+    if (have_rows('betspin_about_us_block')) :
+        while (have_rows('betspin_about_us_block')) : the_row();
+            $img = get_sub_field('betspin_block_image');
+            $header = get_sub_field('betspin_block_header');
+            $text = get_sub_field('betspin_block_text');
 
-            echo "<img src='{$image['url']}' alt='{$image['alt']}'>"
-            ?>
-        </div>
-        <div class="g-block-header">
-            <h4><?php the_field('betspin_block_header'); ?></h4>
-        </div>
-        <div class="g-block-text">
-            <p><?php the_field('betspin_block_text'); ?></p>
-        </div>
-    </div>
+            $output = "<div class='g-block-item'>";
+            $output .= "<div class='g-block-wrap'>";
+            $output .= "<div class='g-block-img'><img src='{$img['url']}' alt='{$img['alt']}'></div>";
+            $output .= "<div class='g-block-header'><h4>{$header}</h4></div>";
+            $output .= "<div class='g-block-text'><p>{$text}</p></div>";
+            $output .= "</div></div>";
+
+            echo $output;
+        endwhile;
+    endif;
+    ?>
 </div>
