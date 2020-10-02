@@ -652,11 +652,14 @@ img.aligncenter {
         font-size: 1.5rem;
         line-height: 2.5rem;
         padding: 2rem 0;
-        width: 66%;
         margin: 0 auto;
     }
     .front-page-head .homepage-button .btn-right {
-        padding: .4rem 2.4rem;
+        padding: .5rem 2.4rem;
+    }
+
+    .front-page-head .homepage-button .btn-right a{
+        font-size: 1.7rem;
     }
 }
 
