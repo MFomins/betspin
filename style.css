@@ -688,6 +688,7 @@ img.aligncenter {
     margin-bottom: 1rem;
     font-weight: 400;
     font-size: 2.2rem;
+    text-transform: uppercase;
 }
 
 .page-content h3 {
