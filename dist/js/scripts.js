@@ -12,7 +12,7 @@ jQuery(document).ready(function ($) {
         $('.nav-search .icon-search').show();
     });
 
-    $('#nav-icon').on('click', function(){
+    $('#nav-icon').on('click', function () {
         $('.slideout-menu').toggle();
     });
 
