@@ -1,13 +1,13 @@
 jQuery(document).ready(function ($) {
-    $('.nav-search button').on('mouseenter', function () {
-        $('.nav-search input').show();
+
+    $('.search-icon').on('click', function () {
+        $('.search-overlay').css('display', 'flex');
+        $('body').css('overflow-y', 'hidden');
     });
 
-    $('.nav-search input').on('mouseleave', function () {
-        $('.nav-search input').css('display', 'none');
+    $('.overlay-close').on('click', function () {
+        $('.search-overlay').css('display', 'none');
+        $('body').css('overflow-y', 'initial');
     });
 
-    $('#nav-icon').on('click', function () {
-        $('.slideout-menu').toggle();
-    });
 });
