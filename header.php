@@ -9,12 +9,12 @@
 
 <body <?php body_class(); ?>>
     <div class="slideout-menu">
-        <?php if (has_nav_menu('main-menu')) : ?>
+        <?php if (has_nav_menu('mobile-menu')) : ?>
             <?php
             $args = array(
-                'theme_location' => 'main-menu',
+                'theme_location' => 'mobile-menu',
                 'container' => 'nav',
-                'container_class' => 'main-menu',
+                'container_class' => 'mobile-menu',
             );
             wp_nav_menu($args);
             ?>
