@@ -102,7 +102,7 @@ function betspin_scripts()
     wp_enqueue_style('fontello', BETSPIN_DIR_URI . '/dist/css/fontello/fontello-embedded.css', array(), '1.0.0');
 
     //Main stylesheet
-    wp_enqueue_style('betspin-main', get_stylesheet_uri(), array('normalize'), '1.0.44');
+    wp_enqueue_style('betspin-main', get_stylesheet_uri(), array('normalize'), '1.0.45');
 
     /** Load main JavaScript files */
     wp_enqueue_script('betspin-scripts', BETSPIN_DIR_URI . '/dist/js/scripts.js', array('jquery'), '1.0.0', true);
@@ -113,6 +113,7 @@ function betspin_add_menus()
 {
     register_nav_menus(array(
         'main-menu' => 'Main Menu',
+        'mobile-menu' => 'Mobile Menu',
         'footer-1' => 'Footer Menu 1',
         'footer-2' => 'Footer Menu 2',
         'footer-3' => 'Footer Menu 3',

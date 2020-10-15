@@ -8,6 +8,18 @@
 </head>
 
 <body <?php body_class(); ?>>
+    <div class="slideout-menu">
+        <?php if (has_nav_menu('main-menu')) : ?>
+            <?php
+            $args = array(
+                'theme_location' => 'main-menu',
+                'container' => 'nav',
+                'container_class' => 'main-menu',
+            );
+            wp_nav_menu($args);
+            ?>
+        <?php endif; ?>
+    </div>
     <header class="site-header">
         <div class="navbar container hidden">
             <div class="logo">
@@ -25,8 +37,8 @@
                     ?>
                 <?php endif; ?>
             </div>
-            <div class="nav-login">
-                <div class="search-icon"><i class="icon-search"></i></div>
+            <div class="nav-search">
+                <?php get_search_form(true); ?>
             </div>
         </div>
         <div class="mobile-menu">

@@ -6,11 +6,11 @@
             $header = get_sub_field('betspin_games_header');
             $page = get_sub_field('betspin_games_page');
 
-            $output = "<div class='games-block-item'>";
+            $output = "<div class='games-block-item'><a href='{$page}'>";
             $output .= "<div class='games-block-wrap'>";
             $output .= "<div class='games-block-img'><img src='{$img['url']}' alt='{$img['alt']}'></div>";
-            $output .= "<div class='games-block-header'><a href='{$page}'>{$header}</a></div>";
-            $output .= "</div></div>";
+            $output .= "<div class='games-block-header'><span>{$header}</span></div>";
+            $output .= "</div></a></div>";
 
             echo $output;
         endwhile;
