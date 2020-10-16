@@ -528,6 +528,7 @@ img.aligncenter {
     line-height: 2rem;
     font-size: 1.4rem;
     text-align: center;
+    margin-bottom: 1.5rem;
 }
 
 @media (max-width:767px) {
@@ -1424,4 +1425,5 @@ img.aligncenter {
 
 .dmca-badge img {
     margin-left: 2rem;
+    max-width: 12rem;
 }
