@@ -702,13 +702,19 @@ img.aligncenter {
         padding: .5rem 2.4rem;
     }
     .front-page-head .homepage-button .btn-right a {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
 }
 
 @media (max-width:540px) {
     .front-page-head .homepage-button .btn-right a {
         font-size: 1.5rem;
+    }
+}
+
+@media (max-width:400px) {
+    .front-page-head .homepage-button .btn-right a {
+        font-size: 1.1rem;
     }
 }
 
