@@ -591,13 +591,19 @@ img.aligncenter {
     transform: translate(-50%, 0);
 }
 
+.live-screen-1 {
+    left: 12rem;
+    bottom: 0;
+    z-index: 88;
+}
+
 .live-screen-2 {
-    left: 18rem;
+    left: 30rem;
     bottom: 0;
 }
 
 .live-screen-3 {
-    left: 0;
+    left: 3rem;
     bottom: 0;
 }
 

@@ -3,6 +3,7 @@
     <div class="front-page-head">
         <img src="<?php echo BETSPIN_DIR_URI . "/dist/img/chips.png" ?>" alt="chips" class="front-header front-page-chips">
         <img src="<?php echo BETSPIN_DIR_URI . "/dist/img/3-woman-dealers.png" ?>" alt="dealers" class="front-header front-page-dealers">
+        <img src="<?php echo BETSPIN_DIR_URI . "/dist/img/live-screen-1.png" ?>" alt="live-screen" class="front-header live-screen-1">
         <img src="<?php echo BETSPIN_DIR_URI . "/dist/img/live-screen-2.png" ?>" alt="live-screen" class="front-header live-screen-2">
         <img src="<?php echo BETSPIN_DIR_URI . "/dist/img/live-screen-3.png" ?>" alt="screen" class="front-header live-screen-3">
         <div class="head-info-text container">
