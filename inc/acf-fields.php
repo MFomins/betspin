@@ -43,6 +43,7 @@ function my_acf_init_block_types()
     }
 
     if (function_exists('acf_add_options_page')) {
+
         acf_add_options_page(array(
             'page_title'     => 'Theme General Settings',
             'menu_title'    => 'Theme Settings',
@@ -171,6 +172,62 @@ if (function_exists('acf_add_local_field_group')) :
                     ),
                 ),
             ),
+
+            array(
+                'key' => 'field_5f899a961e15a',
+                'label' => 'Copyright / DMCA',
+                'name' => '',
+                'type' => 'tab',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'placement' => 'left',
+                'endpoint' => 0,
+            ),
+            array(
+                'key' => 'field_5f8997b91bf8a',
+                'label' => 'Copyright text',
+                'name' => 'footer_copyrights',
+                'type' => 'text',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+                'maxlength' => '',
+            ),
+            array(
+                'key' => 'field_5f8997ca1bf8b',
+                'label' => 'DMCA field',
+                'name' => 'dmca_field',
+                'type' => 'text',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+                'maxlength' => '',
+            ),
+
         ),
         'location' => array(
             array(

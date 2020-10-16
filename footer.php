@@ -90,6 +90,13 @@
             <?php the_field('footer_text', 'options'); ?>
         </div>
     </div>
+    <?php if(get_field('footer_copyrights', 'options')) : ?>
+    <div class="footer-copyright">
+        <div class="copyright-wrap container">
+            <p class="copyright-text"><?php echo get_field('footer_copyrights', 'options'); ?> <span class="dmca"><?php the_field('dmca_field', 'options'); ?></span></p>
+        </div>
+    </div>
+    <?php endif; ?>
 </footer>
 
 <?php wp_footer(); ?>
