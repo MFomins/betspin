@@ -702,7 +702,7 @@ img.aligncenter {
 
 @media (max-width:540px) {
     .front-page-head .homepage-button .btn-right a {
-        font-size: 1.1rem;
+        font-size: 1.5rem;
     }
 }
 
@@ -1353,7 +1353,7 @@ img.aligncenter {
         display: none;
         position: absolute;
         width: 100%;
-        top: 118px;
+        top: 71px;
         right: 0;
         animation: fadein 1s;
         z-index: 100;
