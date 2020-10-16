@@ -29,6 +29,9 @@
                 <img src="<?php echo BETSPIN_DIR_URI . "/dist/img/live-casinos.png" ?>" alt="Cards">
                 <h2><?php echo the_title(); ?></h2>
             </div>
+            <div class="breadcrumbs">
+                <?php if (function_exists('rank_math_the_breadcrumbs')) rank_math_the_breadcrumbs(); ?>
+            </div>
         <?php endif; ?>
         <?php while (have_posts()) : the_post(); ?>
             <div class="text-center">

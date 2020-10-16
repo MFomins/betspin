@@ -1387,3 +1387,17 @@ img.aligncenter {
         color: #333;
     }
 }
+
+/* Breadcrumbs */
+.breadcrumbs .rank-math-breadcrumb span {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.breadcrumbs .rank-math-breadcrumb a {
+    text-decoration: underline!important;
+    font-weight: 300;
+    font-size: 1.4rem;
+    color: rgb(104, 104, 104);
+}
