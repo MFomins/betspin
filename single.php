@@ -9,19 +9,6 @@
                         <img src="<?php echo BETSPIN_DIR_URI . "/dist/img/live-casinos.png"; ?>" alt="Cards">
                         <h2><?php echo the_title(); ?></h2>
                     </div>
-                    <div class="header-elements-right">
-                        <div class="single-post-date">
-                            <p>Published by Betspin<span><?php the_date("d.m.y"); ?></span></p>
-                        </div>
-                        <div class="post-share">
-                            <a href="http://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_permalink()); ?>">
-                                <img src="<?php echo BETSPIN_DIR_URI . "/dist/img/facebook.png"; ?>" alt="">
-                            </a>
-                            <a class="twitter-share-button" href="https://twitter.com/intent/tweet">
-                                <img src="<?php echo BETSPIN_DIR_URI . "/dist/img/twitter.png"; ?>" alt="Twitter">
-                            </a>
-                        </div>
-                    </div>
                 </div>
                 <div class="breadcrumbs">
                     <?php if (function_exists('rank_math_the_breadcrumbs')) rank_math_the_breadcrumbs(); ?>
@@ -29,14 +16,6 @@
                 <?php the_content(); ?>
             </div>
         <?php endwhile; ?>
-        <div class="post-share share-bottom">
-            <a href="http://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_permalink()); ?>">
-                <img src="<?php echo BETSPIN_DIR_URI . "/dist/img/facebook.png"; ?>" alt="">
-            </a>
-            <a class="twitter-share-button" href="https://twitter.com/intent/tweet">
-                <img src="<?php echo BETSPIN_DIR_URI . "/dist/img/twitter.png"; ?>" alt="Twitter">
-            </a>
-        </div>
         <div class="post-related-posts">
             <h2 class="custom-header"><img src="<?php echo BETSPIN_DIR_URI . "/dist/img/blog.png"; ?>" alt="Blog image">Related Blog posts</h2>
             <?php echo do_shortcode('[betspin_related_posts]'); ?>

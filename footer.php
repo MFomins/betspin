@@ -84,7 +84,6 @@
             // Do something...
             endif;
             ?>
-            <span class="rights">ALL RIGHTS RESERVED TO BETSPIN</span>
         </div>
         <div class="footer-text-field">
             <?php the_field('footer_text', 'options'); ?>
