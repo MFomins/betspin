@@ -608,7 +608,7 @@ img.aligncenter {
 }
 
 @media (max-width:767px) {
-    .live-screen-3, .live-screen-2, .front-page-chips {
+    .live-screen-3, .live-screen-2, .live-screen-1, .front-page-chips {
         display: none;
     }
 }
