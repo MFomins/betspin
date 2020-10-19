@@ -15,6 +15,7 @@ foreach ($query_args as $key => $string) {
 $the_query = new WP_Query($search_query);
 if ($the_query->have_posts()) : ?>
     <main class="container page section no-sidebar">
+        <h1>Search results:</h1>
         <div class="search-content">
             <div class="search-items-wrap">
                 <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>

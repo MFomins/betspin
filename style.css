@@ -1491,6 +1491,22 @@ img.aligncenter {
 }
 
 .info-404-wrap a {
-    color:#ce2029;
+    color: #ce2029;
     text-transform: uppercase;
+}
+
+/* search page styles */
+
+.search-content {
+    padding: 2rem 0;
+}
+
+.search-item-result {
+    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, .1);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.search-item-result a {
+    color: #ce2029;
 }
