@@ -1495,6 +1495,17 @@ img.aligncenter {
     text-transform: uppercase;
 }
 
+
+@media (max-width:767px) {
+    .iframe-404-container .responsive-iframe {
+        width:370px!important;
+    }
+
+    .info-404, .template-404{
+        padding:0;
+    }
+}
+
 /* search page styles */
 
 .search-content {
@@ -1510,3 +1521,4 @@ img.aligncenter {
 .search-item-result a {
     color: #ce2029;
 }
+
