@@ -74,14 +74,17 @@
                 // Loop through rows.
                 while (have_rows('footer_image_field', 'options')) : the_row();
 
-                    // Load sub field value.
                     $image = get_sub_field('footer_image', 'options');
                     $link = get_sub_field('footer_image_link', 'options');
-                    // Do something...
-                    echo '<div class="footer-img-wrap"><a href="' . $link . '"><img src="' . $image['url'] . '" alt="' . $image['alt'] . '"></a></div>';
-                // End loop.
+
+                    if ($link) {
+                        echo '<div class="footer-img-wrap"><a href="' . $link . '"><img src="' . $image['url'] . '" alt="' . $image['alt'] . '"></a></div>';
+                    } else {
+                        echo '<div class="footer-img-wrap"><img src="' . $image['url'] . '" alt="' . $image['alt'] . '">s</div>';
+                    }
+
                 endwhile;
-            // Do something...
+
             endif;
             ?>
         </div>
@@ -89,12 +92,12 @@
             <?php the_field('footer_text', 'options'); ?>
         </div>
     </div>
-    <?php if(get_field('footer_copyrights', 'options')) : ?>
-    <div class="footer-copyright">
-        <div class="copyright-wrap container">
-            <p class="copyright-text"><?php echo get_field('footer_copyrights', 'options'); ?> <span class="dmca"><?php the_field('dmca_field', 'options'); ?></span></p>
+    <?php if (get_field('footer_copyrights', 'options')) : ?>
+        <div class="footer-copyright">
+            <div class="copyright-wrap container">
+                <p class="copyright-text"><?php echo get_field('footer_copyrights', 'options'); ?> <span class="dmca"><?php the_field('dmca_field', 'options'); ?></span></p>
+            </div>
         </div>
-    </div>
     <?php endif; ?>
 </footer>
 
