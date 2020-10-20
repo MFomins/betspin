@@ -102,7 +102,7 @@ function betspin_scripts()
     wp_enqueue_style('fontello', BETSPIN_DIR_URI . '/dist/css/fontello/fontello-embedded.css', array(), '1.0.0');
 
     //Main stylesheet
-    wp_enqueue_style('betspin-main', get_stylesheet_uri(), array('normalize'), '1.0.64');
+    wp_enqueue_style('betspin-main', get_stylesheet_uri(), array('normalize'), '1.0.65');
 
     /** Load main JavaScript files */
     wp_enqueue_script('betspin-scripts', BETSPIN_DIR_URI . '/dist/js/scripts.js', array('jquery'), '1.0.0', true);
@@ -149,6 +149,31 @@ function betspin_nav_menu_objects($items, $args)
     // return
     return $items;
 }
+
+//Arrow after menu items with children
+function betspin_menu_arrow($item_output, $item, $depth, $args)
+{
+    if (in_array('menu-item-has-children', $item->classes)) {
+        $arrow = '<i class="icon-down-open"></i>'; // Change the class to your font icon
+        $item_output = str_replace('</a>', '</a>' . $arrow . '', $item_output);
+    }
+    return $item_output;
+}
+add_filter('walker_nav_menu_start_el', 'betspin_menu_arrow', 10, 4);
+
+//Give different classes for different submenus
+function custom_submenu_css_class($classes, $args, $depth)
+{
+    if (0 == $depth) {
+        $classes[] = 'sub-menu-1 hide-menu';
+    }
+    if (1 == $depth) {
+        $classes[] = 'sub-menu-2 hide-menu';
+    }
+    // ...
+    return $classes;
+}
+add_filter('nav_menu_submenu_css_class', 'custom_submenu_css_class', 10, 3);
 
 //Custom excerpt lenght
 function betspin_custom_excerpt_length($length)
