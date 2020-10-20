@@ -317,7 +317,7 @@ img.aligncenter {
 }
 
 .navbar .sub-menu .current-menu-item:after {
-    content:none;
+    content: none;
 }
 
 /* Submenu styles */
@@ -352,10 +352,14 @@ img.aligncenter {
     padding: 0;
     margin: 0;
     position: absolute;
-    left: 246px;
-    top:0;
+    left: 245px;
+    top: 0;
     z-index: 50;
     width: 245px;
+}
+
+.navbar .sub-menu .menu-item:hover{
+    background-color:#ce2029;
 }
 
 .hide-menu {
@@ -383,6 +387,7 @@ img.aligncenter {
 .navbar .sub-menu li a {
     width: 100%;
 }
+
 
 /* END Submenu styles */
 
