@@ -1483,109 +1483,159 @@ img.aligncenter {
 
 /* FORM STYLES */
 
+.af-form {
+    background-color: transparent!important;
+}
+
+.af-form .af-element {
+    font-family: 'Rubik'!important;
+}
+
+.af-form .af-element {
+    padding: 0!important;
+}
+
 .af-form-wrapper {
-    margin-left: calc(-100vw / 2 + 115rem / 2);
-    margin-right: calc(-100vw / 2 + 115rem / 2);
-    background-image: url(dist/img/dealer-bg.png);
-    height: 382px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: cover;
-    position: relative;
-    margin-bottom: 2rem;
+    margin-left: calc(-100vw / 2 + 115rem / 2)!important;
+    margin-right: calc(-100vw / 2 + 115rem / 2)!important;
+    background-image: url(dist/img/dealer-bg.png)!important;
+    height: 381px!important;
+    display: flex!important;
+    align-items: center!important;
+    justify-content: center!important;
+    background-size: cover!important;
+    position: relative!important;
+    margin-bottom: 2rem!important;
+}
+
+.af-form .af-body {
+    padding:30px 0 0 0!important;
 }
 
 .af-form-wrapper .af-element {
-    display: inline-block;
+    display: inline-block!important;
 }
 
 .af-form-wrapper .af-element-checkbox {
-    display: block;
-    margin-right: 20px;
-    color: #fff;
+    display: block!important;
+    margin-right: 20px!important;
+    color: #fff!important;
+}
+
+.af-element label {
+    color: #fff!important;
+    opacity: 1!important;
+}
+
+.af-element input {
+    opacity: 1!important;
+    box-shadow: none!important;
+}
+
+.af-element-checkbox input {
+    opacity: 1!important;
+}
+
+.af-form input[type=submit], .af-form input[type=text] {
+    font-family: var(--mainFont)!important;
+}
+
+input#awf_field-109168814 {
+    padding: 20px!important;
 }
 
 .af-element:first-child, .af-element:nth-child(1) {
-    display: inline-block;
+    display: inline-block!important;
 }
 
-.af-form-wrapper .bts-dealer {
-    position: absolute;
-    right: 5rem;
-    top: 0;
+.af-form-wrapper img {
+    position: absolute!important;
+    right: 5rem!important;
+    top: 0!important;
 }
 
-.af-form-wrapper .form-head {
-    font-size: 5rem;
-    text-transform: uppercase;
-    color: #fff;
-    font-weight: bold;
-    line-height: 6rem;
-    letter-spacing: -1px;
+.af-form-wrapper .af-element .bodyText p:nth-of-type(1) {
+    font-size: 5rem!important;
+    text-transform: uppercase!important;
+    color: #fff!important;
+    font-weight: bold!important;
+    line-height: 6rem!important;
+    letter-spacing: -1px!important;
+    margin: 0!important;
+}
+
+.af-form-wrapper .af-element .bodyText p:nth-of-type(2) {
+    display: block!important;
+    color: #ce2029!important;
+    font-size: 5.6rem!important;
+    margin: 0!important;
+    font-weight: bold!important;
+    text-transform: uppercase!important;
 }
 
 .af-element.buttonContainer {
-    padding: 25px;
+    padding: 25px!important;
+    opacity: 1!important;
 }
 
-.af-form-wrapper .form-head span {
-    display: block;
-    color: #ce2029;
-    font-size: 5.6rem;
+/* high specificity for this field */
+.page-content #af-form-1288218646 .af-body input.text, #af-form-1288218646 .af-body .textInput input.text {
+    padding:14px!important;
+    width:300px!important;
 }
 
 .af-form input {
-    padding: 15px;
-    border: none;
-    border-radius: 3px;
+    padding: 15px!important;
+    border: none!important;
+    border-radius: 3px!important;
 }
 
 .af-form input[type=submit] {
-    color: #fff;
-    background: #2dbf38;
-    text-transform: uppercase;
-    font-size: 16px;
+    color: #fff!important;
+    background: #2dbf38!important;
+    text-transform: uppercase!important;
+    font-size: 16px!important;
 }
 
 .btsform .bts-terms {
-    margin-top: 30px;
+    margin-top: 30px!important;
 }
 
 .btsform .bts-terms p {
-    font-size: 12px;
-    font-style: italic;
-    color: #999;
+    font-size: 12px!important;
+    font-style: italic!important;
+    color: #999!important;
+}
+
+.af-form-wrapper .af-element:first-child {
+    display: block!important;
 }
 
 @media (max-width:767px) {
-    .af-form {
-        padding-top:20px;
+    .af-form img{
+        display: none!important;
     }
 
-    .bts-dealer {
-        display: none;
-    }
-    .btsform .bts-input-wrap p:first-child {
-        margin-right: 0;
-    }
     .af-form-wrapper {
-        display: block;
-        margin-right: -15px;
-        margin-left: -15px;
-        height: 385px;
+        margin-left:-15px!important;
+        margin-right: -15px!important;
+        height: 450px!important;
+    }
+
+    .af-form img {
+        display: none!important;
+    }
+
+    .af-form-wrapper .af-element .bodyText p:nth-of-type(1),.af-form-wrapper .af-element .bodyText p:nth-of-type(2){
+        font-size:4rem!important;
+    }
+
+    .af-form .af-body {
+        padding:20px!important;
     }
 
     .af-element.buttonContainer {
-        padding:20px 0;
-    }
-
-    .af-form-wrapper .form-head {
-        font-size: 4rem;
-    }
-
-    .af-form-wrapper .form-head span {
-        font-size: 4rem;
+        padding:20px 0!important;
     }
 }
 

@@ -61,11 +61,6 @@ jQuery(document).ready(function ($) {
 
 
     //Add stuff to aweber forms
-    $('.af-body').addClass('container');
-
-    $(".af-body").append('<img class="bts-dealer" src="https://betspin.yoursite.lv/wp-content/themes/betspin-theme/dist/img/woman-dealer.png" alt="form-dealer">');
-
-    $(".af-body").prepend('<div class="form-head">Sign up now for <span>+100 free spins<span></div>');
 });
 
 
