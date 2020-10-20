@@ -18,7 +18,7 @@ jQuery(document).ready(function ($) {
     });
 
     //Submenu level 1
-    $('.menu-item-has-children').on('mouseenter', function () {
+    $('.navbar .menu-item-has-children').on('mouseenter', function () {
         var sub = $(this).find('.sub-menu-1');
         sub.removeClass('hide-menu');
         sub.addClass('show-menu');
@@ -29,10 +29,8 @@ jQuery(document).ready(function ($) {
         });
     });
 
-
-
     //Submenu level 2
-    $('.menu-item-has-children .menu-item-has-children').on('mouseenter', function () {
+    $('.navbar .menu-item-has-children .menu-item-has-children').on('mouseenter', function () {
         var sub2 = $(this).find('.sub-menu-2');
 
         sub2.addClass('show-menu');
@@ -50,8 +48,15 @@ jQuery(document).ready(function ($) {
 
 
 
-    // $('.menu-item-has-children').on('mouseleave', function(){
-    //     $(this).find('.sub-menu-1').slideUp();
-    // });
+    //mobile submenu
+    $('.slideout-menu .menu-item-has-children i').on('click', function () {
+        var sub = $(this).siblings('.sub-menu-1');
+        sub.toggle();
+    });
+
+    $('.slideout-menu .menu-item-has-children .menu-item-has-children i').on('click', function () {
+        var sub = $(this).siblings('.sub-menu-2');
+        sub.toggle();
+    });
 
 });
