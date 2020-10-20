@@ -60,6 +60,8 @@ body {
     font-family: var(--mainFont);
     font-size: 1.6rem;
     line-height: 2;
+    opacity: 0; 
+    transition: opacity .8s; 
 }
 
 #panel {
@@ -1510,7 +1512,7 @@ img.aligncenter {
 }
 
 .af-form .af-body {
-    padding:30px 0 0 0!important;
+    padding: 30px 0 0 0!important;
 }
 
 .af-form-wrapper .af-element {
@@ -1586,9 +1588,10 @@ input#awf_field-109168814 {
 }
 
 /* high specificity for this field */
+
 .page-content #af-form-1288218646 .af-body input.text, #af-form-1288218646 .af-body .textInput input.text {
-    padding:14px!important;
-    width:300px!important;
+    padding: 14px!important;
+    width: 300px!important;
 }
 
 .af-form input {
@@ -1619,30 +1622,25 @@ input#awf_field-109168814 {
 }
 
 @media (max-width:767px) {
-    .af-form img{
-        display: none!important;
-    }
-
-    .af-form-wrapper {
-        margin-left:-15px!important;
-        margin-right: -15px!important;
-        height: 450px!important;
-    }
-
     .af-form img {
         display: none!important;
     }
-
-    .af-form-wrapper .af-element .bodyText p:nth-of-type(1),.af-form-wrapper .af-element .bodyText p:nth-of-type(2){
-        font-size:4rem!important;
+    .af-form-wrapper {
+        margin-left: -15px!important;
+        margin-right: -15px!important;
+        height: 450px!important;
     }
-
+    .af-form img {
+        display: none!important;
+    }
+    .af-form-wrapper .af-element .bodyText p:nth-of-type(1), .af-form-wrapper .af-element .bodyText p:nth-of-type(2) {
+        font-size: 4rem!important;
+    }
     .af-form .af-body {
-        padding:20px!important;
+        padding: 20px!important;
     }
-
     .af-element.buttonContainer {
-        padding:20px 0!important;
+        padding: 20px 0!important;
     }
 }
 

@@ -62,5 +62,3 @@ jQuery(document).ready(function ($) {
 
     //Add stuff to aweber forms
 });
-
-
