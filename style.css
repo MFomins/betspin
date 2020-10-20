@@ -60,19 +60,19 @@ body {
     font-family: var(--mainFont);
     font-size: 1.6rem;
     line-height: 2;
-    animation: fadeInAnimation ease-in 1.2s;
+    /* animation: fadeInAnimation ease-in 1.2s;
     animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards; */
 }
 
-@keyframes fadeInAnimation {
+/* @keyframes fadeInAnimation {
     0% {
         opacity: 0;
     }
     100% {
         opacity: 1;
     }
-}
+} */
 
 #panel {
     background-color: #f8f8f8;
