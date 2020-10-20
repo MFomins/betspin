@@ -60,7 +60,7 @@ body {
     font-family: var(--mainFont);
     font-size: 1.6rem;
     line-height: 2;
-    animation: fadeInAnimation linear .8s;
+    animation: fadeInAnimation ease-in 1.2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
