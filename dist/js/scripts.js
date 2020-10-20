@@ -58,7 +58,4 @@ jQuery(document).ready(function ($) {
         var sub = $(this).siblings('.sub-menu-2');
         sub.toggle();
     });
-
-
-    //Add stuff to aweber forms
 });

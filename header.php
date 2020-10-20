@@ -7,7 +7,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body onload='document.body.style.opacity="1"' <?php body_class(); ?>>
+<body <?php body_class(); ?>>
     <div class="search-overlay">
         <div class="overlay-close">X</div>
         <div class="overlay-search-form">
