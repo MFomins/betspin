@@ -37,6 +37,11 @@ jQuery(document).ready(function ($) {
 
         sub2.addClass('show-menu');
 
+        $(this).on('mouseleave', function () {
+            sub2.removeClass('show-menu');
+            sub2.addClass('hide-menu');
+        });
+
         $('.sub-menu-2').on('mouseleave', function () {
             $(this).removeClass('show-menu');
             $(this).addClass('hide-menu');
