@@ -64,7 +64,7 @@ body {
 
 @media (min-width:768px) {
     body {
-        animation: fadeInAnimation ease-in .8s;
+        animation: fadeInAnimation ease-in .5s;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
     }
