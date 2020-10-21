@@ -1,4 +1,6 @@
-<div class="games-block-items">
+<div class="games-block-items <?php if (get_field('betspin_games_columns') == 5) {
+                                    echo 'games-block-5';
+                                } ?>">
     <?php
     if (have_rows('betspin_games_block')) :
         while (have_rows('betspin_games_block')) : the_row();

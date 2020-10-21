@@ -1146,7 +1146,17 @@ img.aligncenter {
     grid-template-rows: auto;
     gap: 2.5rem;
     margin: 1rem 0;
+    overflow: hidden;
 }
+
+.games-block-items.games-block-5 {
+    grid-template-columns: repeat(5, 18.2%);
+}
+
+.games-block-items.games-block-5 .games-block-wrap{
+    padding: 5rem 3rem 2.5rem;
+}
+
 
 .games-block-item {
     background: #ce2029;

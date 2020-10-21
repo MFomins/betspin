@@ -356,6 +356,56 @@ if (function_exists('acf_add_local_field_group')) :
     ));
 
     acf_add_local_field_group(array(
+        'key' => 'group_5f8fe9d823947',
+        'title' => 'Games Block Columns',
+        'fields' => array(
+            array(
+                'key' => 'field_5f8fe9dfb300b',
+                'label' => 'Columns',
+                'name' => 'betspin_games_columns',
+                'type' => 'select',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'choices' => array(
+                    4 => '4',
+                    5 => '5',
+                ),
+                'default_value' => false,
+                'allow_null' => 0,
+                'multiple' => 0,
+                'ui' => 0,
+                'return_format' => 'value',
+                'ajax' => 0,
+                'placeholder' => '',
+            ),
+        ),
+        'location' => array(
+            array(
+                array(
+                    'param' => 'block',
+                    'operator' => '==',
+                    'value' => 'acf/games-block',
+                ),
+            ),
+        ),
+        'menu_order' => 0,
+        'position' => 'normal',
+        'style' => 'default',
+        'label_placement' => 'top',
+        'instruction_placement' => 'label',
+        'hide_on_screen' => '',
+        'active' => true,
+        'description' => '',
+    ));
+
+
+    acf_add_local_field_group(array(
         'key' => 'group_5f6dbc4c15449',
         'title' => 'Theme Gutenberg Games Block',
         'fields' => array(
@@ -402,6 +452,7 @@ if (function_exists('acf_add_local_field_group')) :
                         'max_size' => '',
                         'mime_types' => '',
                     ),
+
                     array(
                         'key' => 'field_5f77087e95226',
                         'label' => 'Header',
