@@ -360,7 +360,7 @@ img.aligncenter {
     margin: 0;
     position: absolute;
     top: 46px;
-    z-index: 50;
+    z-index: 99;
     width: 245px;
 }
 
