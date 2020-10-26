@@ -1223,6 +1223,10 @@ img.aligncenter {
     .games-block-items {
         grid-template-columns: auto;
     }
+
+    .games-block-items.games-block-5 {
+        grid-template-columns: auto;
+    }
 }
 
 /* Signup form styles */
