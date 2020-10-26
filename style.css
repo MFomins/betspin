@@ -347,6 +347,7 @@ img.aligncenter {
     cursor: pointer;
 }
 
+
 .navbar .sub-menu-1 {
     box-shadow: 0 1px 8px 0 rgba(0, 0, 0, .3);
     background-color: #fff;
@@ -370,9 +371,18 @@ img.aligncenter {
     width: 245px;
 }
 
-.navbar .sub-menu .menu-item:hover {
+.navbar .sub-menu-1 .menu-item:hover {
     background-color: #ce2029;
 }
+
+.navbar .sub-menu-1 .menu-item:hover .icon-down-open{
+    color:#fff!important;
+}
+
+.navbar .sub-menu-1 .menu-item:hover a{
+    color:#fff!important;
+}
+
 
 .hide-menu {
     display: none;
