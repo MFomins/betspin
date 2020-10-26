@@ -68,7 +68,6 @@ body {
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
     }
-
     @keyframes fadeInAnimation {
         0% {
             opacity: 0;
@@ -247,11 +246,6 @@ img.aligncenter {
 
 .custom-logo {
     max-width: 8rem;
-}
-
-.site-header {
-    border-bottom: 1px solid #e3e3e3;
-    height: 61.67px;
 }
 
 .site-header .navbar {
@@ -477,11 +471,18 @@ img.aligncenter {
         top: 20px;
         width: 60%;
     }
+    .search-icon {
+        display: none;
+    }
 }
 
 @media (min-width:768px) {
     .mobile-menu {
         display: none!important;
+    }
+    .site-header {
+        border-bottom: 1px solid #e3e3e3;
+        height: 61.67px;
     }
 }
 
@@ -1153,10 +1154,9 @@ img.aligncenter {
     grid-template-columns: repeat(5, 18.2%);
 }
 
-.games-block-items.games-block-5 .games-block-wrap{
+.games-block-items.games-block-5 .games-block-wrap {
     padding: 5rem 3rem 2.5rem;
 }
-
 
 .games-block-item {
     background: #ce2029;
