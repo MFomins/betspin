@@ -80,7 +80,7 @@
                     if ($link) {
                         echo '<div class="footer-img-wrap"><a href="' . $link . '"><img src="' . $image['url'] . '" alt="' . $image['alt'] . '"></a></div>';
                     } else {
-                        echo '<div class="footer-img-wrap"><img src="' . $image['url'] . '" alt="' . $image['alt'] . '">s</div>';
+                        echo '<div class="footer-img-wrap"><img src="' . $image['url'] . '" alt="' . $image['alt'] . '"></div>';
                     }
 
                 endwhile;
