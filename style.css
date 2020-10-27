@@ -750,6 +750,10 @@ img.aligncenter {
     align-items: center;
 }
 
+.homepage-button .btn-right, .homepage-button .btn-left{
+    height: 48px;
+}
+
 .front-page-head .homepage-button .btn-left {
     background-color: #2dbf38;
     color: #fff;
