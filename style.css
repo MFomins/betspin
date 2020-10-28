@@ -1546,8 +1546,8 @@ img.aligncenter {
 }
 
 .af-form-wrapper {
-    margin-left: calc(-100vw / 2 + 115rem / 2)!important;
-    margin-right: calc(-100vw / 2 + 115rem / 2)!important;
+    margin-left: calc(-100vw / 2 + 116.3rem / 2)!important;
+    margin-right: calc(-100vw / 2 + 116.3rem / 2)!important;
     background-image: url(dist/img/dealer-bg.png)!important;
     height: 381px!important;
     display: flex!important;
