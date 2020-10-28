@@ -1160,7 +1160,7 @@ img.aligncenter {
     grid-template-columns: repeat(4, 23%);
     grid-template-rows: auto;
     gap: 2.5rem;
-    margin: 1rem 0;
+    margin: 3.5rem 0;
     overflow: hidden;
 }
 
