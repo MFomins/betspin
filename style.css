@@ -109,6 +109,11 @@ a {
     text-decoration: none;
 }
 
+.page-content a {
+    color:#ce2029;
+    font-weight: bold;
+}
+
 ul {
     list-style-type: none;
     padding: 0 0 0 5rem;
@@ -116,8 +121,16 @@ ul {
     font-size: 1.4rem;
 }
 
+@media (max-width:767px) {
+    ul {
+        padding: 0 0 0 3rem;
+    }
+}
+
 .page-content ul li {
     position: relative;
+    line-height: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .page-content ul li:before {
@@ -347,7 +360,6 @@ img.aligncenter {
     cursor: pointer;
 }
 
-
 .navbar .sub-menu-1 {
     box-shadow: 0 1px 8px 0 rgba(0, 0, 0, .3);
     background-color: #fff;
@@ -375,14 +387,13 @@ img.aligncenter {
     background-color: #ce2029;
 }
 
-.navbar .sub-menu-1 .menu-item:hover .icon-down-open{
-    color:#fff!important;
+.navbar .sub-menu-1 .menu-item:hover .icon-down-open {
+    color: #fff!important;
 }
 
-.navbar .sub-menu-1 .menu-item:hover a{
-    color:#fff!important;
+.navbar .sub-menu-1 .menu-item:hover a {
+    color: #fff!important;
 }
-
 
 .hide-menu {
     display: none;
@@ -751,7 +762,7 @@ img.aligncenter {
     align-items: center;
 }
 
-.homepage-button .btn-right, .homepage-button .btn-left{
+.homepage-button .btn-right, .homepage-button .btn-left {
     height: 48px;
 }
 
@@ -1000,7 +1011,7 @@ img.aligncenter {
     justify-content: flex-end;
     border-radius: 3px;
     margin: 20px 0;
-    padding:60px 25px 70px;
+    padding: 60px 25px 70px;
     position: relative;
 }
 
@@ -1009,7 +1020,6 @@ img.aligncenter {
     flex-direction: column;
     align-items: center;
 }
-
 
 .deal-wrap .roulette-wheel {
     position: absolute;
@@ -1038,17 +1048,14 @@ img.aligncenter {
         line-height: 2rem;
         text-align: center;
     }
-
     .deal-row-2 {
         margin-top: 1rem;
         font-size: 1.8rem;
         font-weight: normal;
     }
-
     .casino-deal-block {
-        padding:20px 10px 140px 10px;
+        padding: 20px 10px 140px 10px;
     }
-
 }
 
 /* Deposit block shortcode */
@@ -1227,11 +1234,9 @@ img.aligncenter {
     .games-block-items {
         grid-template-columns: auto;
     }
-
     .games-block-items.games-block-5 {
         grid-template-columns: auto;
     }
-
     .games-block-img img {
         width: 20rem;
     }
@@ -1675,7 +1680,7 @@ input#awf_field-109168814 {
     .af-form-wrapper {
         margin-left: -15px!important;
         margin-right: -15px!important;
-        height: 450px!important;
+        height: 500px!important;
     }
     .af-form img {
         display: none!important;
