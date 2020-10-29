@@ -7,7 +7,7 @@
                 <div class="header-elements">
                     <div class="header-elements-left">
                         <img src="<?php echo BETSPIN_DIR_URI . "/dist/img/live-casinos.png"; ?>" alt="Cards">
-                        <h2><?php echo the_title(); ?></h2>
+                        <h1><?php echo the_title(); ?></h1>
                     </div>
                 </div>
                 <div class="breadcrumbs">

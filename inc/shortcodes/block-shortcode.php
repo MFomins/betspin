@@ -6,13 +6,13 @@ function casino_block($atts)
 {
     ob_start();
 ?>
-
-    <div class="casino-deal-block">
-        <?php
-        include BETSPIN_TEMPLATE_DIR . '/inc/shortcodes/blocks/casino-deal-block.php';
-        ?>
-    </div>
-
+    <a href="/bonuses">
+        <div class="casino-deal-block">
+            <?php
+            include BETSPIN_TEMPLATE_DIR . '/inc/shortcodes/blocks/casino-deal-block.php';
+            ?>
+        </div>
+    </a>
 <?php
     return ob_get_clean();
 }

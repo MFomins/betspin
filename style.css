@@ -526,9 +526,10 @@ img.aligncenter {
     background: #ce2029;
 }
 
-.page-content .header-elements h2 {
+.page-content .header-elements h1 {
     margin: 0;
     text-transform: uppercase;
+    font-weight: 400;
     font-size: 2rem;
     letter-spacing: -1px;
 }
@@ -999,15 +1000,16 @@ img.aligncenter {
     justify-content: flex-end;
     border-radius: 3px;
     margin: 20px 0;
+    padding:60px 25px 70px;
     position: relative;
 }
 
 .deal-wrap {
-    padding: 30px 100px 30px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 
 .deal-wrap .roulette-wheel {
     position: absolute;
@@ -1015,41 +1017,38 @@ img.aligncenter {
     bottom: 0;
 }
 
-.deal-row {
-    font-size: 2.6rem;
-    line-height: 3.8rem;
-}
-
-.deal-row span {
+.deal-row-1 {
     font-weight: bold;
-    font-size: 4.2rem;
+    text-transform: uppercase;
+    font-size: 4rem;
 }
 
-.deal-row .smaller {
-    font-size: 3.2rem;
-}
-
-.deal-row:nth-child(4) span {
-    font-size: 2.7rem;
+.deal-row-2 {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.8rem;
 }
 
 @media (max-width:767px) {
     .casino-deal-block {
         justify-content: center;
     }
-    .deal-wrap {
-        padding: 30px 30px 120px;
-    }
-    .deal-row {
-        font-size: 2rem;
+    .deal-row-1, .deal-row-2 {
+        font-size: 2.2rem;
+        line-height: 2rem;
         text-align: center;
     }
-    .deal-row span {
-        font-size: 2.5rem;
+
+    .deal-row-2 {
+        margin-top: 1rem;
+        font-size: 1.8rem;
+        font-weight: normal;
     }
-    .deal-row:nth-child(4) span {
-        font-size: 2.5rem;
+
+    .casino-deal-block {
+        padding:20px 10px 140px 10px;
     }
+
 }
 
 /* Deposit block shortcode */

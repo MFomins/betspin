@@ -27,7 +27,7 @@
         <?php if (!is_front_page()) : ?>
             <div class="header-elements">
                 <img src="<?php echo BETSPIN_DIR_URI . "/dist/img/live-casinos.png" ?>" alt="Cards">
-                <h2><?php echo the_title(); ?></h2>
+                <h1><?php echo the_title(); ?></h1>
             </div>
             <div class="breadcrumbs">
                 <?php if (function_exists('rank_math_the_breadcrumbs')) rank_math_the_breadcrumbs(); ?>
