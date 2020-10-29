@@ -110,7 +110,7 @@ a {
 }
 
 .page-content p a {
-    color:#ce2029;
+    color: #ce2029;
     font-weight: bold;
 }
 
@@ -259,6 +259,10 @@ img.aligncenter {
 
 .custom-logo {
     max-width: 8rem;
+}
+
+.site-header {
+    border-bottom: 1px solid #e3e3e3;
 }
 
 .site-header .navbar {
@@ -502,7 +506,6 @@ img.aligncenter {
         display: none!important;
     }
     .site-header {
-        border-bottom: 1px solid #e3e3e3;
         height: 61.67px;
     }
 }
