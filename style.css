@@ -879,11 +879,11 @@ img.aligncenter {
 }
 
 .page-content {
-    flex: 0 0 70%;
+    flex: 0 0 75%;
 }
 
 .sidebar {
-    flex: 0 0 25%;
+    flex: 0 0 22%;
     margin-top: 40px;
 }
 
