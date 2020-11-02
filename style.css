@@ -780,10 +780,10 @@ img.aligncenter {
 }
 
 .front-page-head .homepage-button .btn-left {
-    background-color: #2dbf38;
+    background-color: #04740B;
     color: #fff;
     border-radius: .3rem 0 0 .3rem;
-    border-right: 1px solid #1c9a25;
+    border-right: 1px solid #05800d;
     display: flex;
     align-items: center;
     padding: 1.2rem 1rem;
@@ -795,7 +795,7 @@ img.aligncenter {
 
 .front-page-head .homepage-button .btn-right {
     display: flex;
-    background-color: #2dbf38;
+    background-color: #04740B;
     padding: .4rem 5rem .4rem 4rem;
     border-radius: 0 .3rem .3rem 0;
 }
@@ -1675,7 +1675,7 @@ input#awf_field-109168814 {
 
 .af-form input[type=submit] {
     color: #fff!important;
-    background: #2dbf38!important;
+    background: #04740B!important;
     text-transform: uppercase!important;
     font-size: 16px!important;
 }
