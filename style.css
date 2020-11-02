@@ -687,13 +687,23 @@ img.aligncenter {
 /* Front page header block */
 
 .front-page-head {
-    background-image: url(dist/img/chips-lightning-roulette-min.png);
-    background-color: #333;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: #000000;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #434343, #000000);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #434343, #000000);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     padding: 22rem 0 4rem;
     text-align: center;
     position: relative;
+}
+
+@media (min-width:768px) {
+    .front-page-head {
+        background-image: url(dist/img/chips-lightning-roulette-min.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 }
 
 .front-header {
@@ -802,9 +812,6 @@ img.aligncenter {
 }
 
 @media (max-width:767px) {
-    .front-page-head {
-        background-position-x: -180px;
-    }
     .front-page-head .head-info-wrap {
         margin-left: 0;
     }
@@ -1556,7 +1563,12 @@ img.aligncenter {
 .af-form-wrapper {
     margin-left: calc(-100vw / 2 + 116.3rem / 2)!important;
     margin-right: calc(-100vw / 2 + 116.3rem / 2)!important;
-    background-image: url(dist/img/dealer-bg-min.png)!important;
+    background: #000000;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #434343, #000000);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #434343, #000000);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     height: 381px!important;
     display: flex!important;
     align-items: center!important;
@@ -1564,6 +1576,12 @@ img.aligncenter {
     background-size: cover!important;
     position: relative!important;
     margin-bottom: 2rem!important;
+}
+
+@media (min-width:768px) {
+    .af-form-wrapper {
+        background-image: url(dist/img/dealer-bg-min.png)!important;
+    }
 }
 
 .af-form .af-body {
