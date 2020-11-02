@@ -687,7 +687,7 @@ img.aligncenter {
 /* Front page header block */
 
 .front-page-head {
-    background-image: url(dist/img/chips-lightning-roulette.png);
+    background-image: url(dist/img/chips-lightning-roulette-min.png);
     background-color: #333;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1556,7 +1556,7 @@ img.aligncenter {
 .af-form-wrapper {
     margin-left: calc(-100vw / 2 + 116.3rem / 2)!important;
     margin-right: calc(-100vw / 2 + 116.3rem / 2)!important;
-    background-image: url(dist/img/dealer-bg.png)!important;
+    background-image: url(dist/img/dealer-bg-min.png)!important;
     height: 381px!important;
     display: flex!important;
     align-items: center!important;
