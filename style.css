@@ -780,10 +780,10 @@ img.aligncenter {
 }
 
 .front-page-head .homepage-button .btn-left {
-    background-color: #04740B;
+    background-color: #3ec148;
     color: #fff;
     border-radius: .3rem 0 0 .3rem;
-    border-right: 1px solid #05800d;
+    border-right: 1px solid #40af51;
     display: flex;
     align-items: center;
     padding: 1.2rem 1rem;
@@ -795,7 +795,7 @@ img.aligncenter {
 
 .front-page-head .homepage-button .btn-right {
     display: flex;
-    background-color: #04740B;
+    background-color: #3ec148;
     padding: .4rem 5rem .4rem 4rem;
     border-radius: 0 .3rem .3rem 0;
 }
