@@ -1751,39 +1751,36 @@ input#awf_field-109168814 {
     }
 }
 
-/* .af-form-wrapper .af-element .bodyText p:nth-of-type(1) {
-    font-size     : 5rem !important;
-    text-transform: uppercase !important;
-    color         : #fff !important;
-    font-weight   : bold !important;
-    line-height   : 6rem !important;
-    letter-spacing: -1px !important;
-    margin        : 0 !important;
-} */
-
-/* .af-form-wrapper .af-element .bodyText p:nth-of-type(2) {
-    display       : block !important;
-    color         : #ce2029 !important;
-    font-size     : 5.6rem !important;
-    margin        : 0 !important;
-    font-weight   : bold !important;
-    text-transform: uppercase !important;
-} */
-
-/* 
-.af-form-wrapper .af-element:nth-child(6) .bodyText p:first-child {
-    font-size     : 16px !important;
-    font-weight   : normal !important;
-    text-transform: lowercase !important;
+.af-body .af-element:first-child p {
+    margin: 10px 0 !important;
 }
 
-.af-form-wrapper .af-element:nth-child(6) .bodyText p a {
+.af-body .af-element:first-child p:first-of-type {
+    color      : #fff !important;
+    font-size  : 30px;
+    font-weight: bold;
+}
+
+.af-body .af-element:first-child p:nth-of-type(2) {
+    color      : #fff !important;
+    font-size  : 30px;
+    font-weight: bold
+}
+
+.af-body .af-element:first-child p:nth-of-type(3) {
+    color      : #ce2029 !important;
+    font-size  : 30px;
+    font-weight: bold
+}
+
+.af-body .af-element:nth-child(4) {
+    display: block !important;
+    color  : #fff;
+}
+
+.af-body .af-element:nth-child(4) a {
     color: #ce2029 !important;
 }
-
-.af-form-wrapper .af-element:nth-child(6) .bodyText p:first-child:first-letter {
-    text-transform: uppercase !important;
-} */
 
 /* high specificity for this field */
 
