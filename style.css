@@ -1770,6 +1770,20 @@ input#awf_field-109168814 {
     opacity: 1 !important;
 }
 
+.af-form-wrapper .af-element:nth-child(6) .bodyText p:first-child {
+    font-size     : 16px !important;
+    font-weight   : normal !important;
+    text-transform: lowercase !important;
+}
+
+.af-form-wrapper .af-element:nth-child(6) .bodyText p a {
+    color: #ce2029 !important;
+}
+
+.af-form-wrapper .af-element:nth-child(6) .bodyText p:first-child:first-letter {
+    text-transform: uppercase !important;
+}
+
 /* high specificity for this field */
 
 .page-content #af-form-1288218646 .af-body input.text,
