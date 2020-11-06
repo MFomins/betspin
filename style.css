@@ -667,7 +667,7 @@ table p {
     justify-content: space-between;
 }
 
-.site-footer .footer-wrap h4 {
+.site-footer .footer-wrap span {
     margin        : 0;
     color         : #fff;
     text-transform: uppercase;
