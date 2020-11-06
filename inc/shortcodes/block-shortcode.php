@@ -6,7 +6,7 @@ function casino_block($atts)
 {
     ob_start();
 ?>
-    <a href="/bonuses">
+    <a href="https://www.betspin.com/bonuses/">
         <div class="casino-deal-block">
             <?php
             include BETSPIN_TEMPLATE_DIR . '/inc/shortcodes/blocks/casino-deal-block.php';
