@@ -1284,6 +1284,8 @@ table p {
     text-transform: uppercase;
     font-weight   : 500;
     font-size     : 2rem;
+    display: flex;
+    align-items: center;
 }
 
 @media (max-width:767px) {
