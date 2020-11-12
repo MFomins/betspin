@@ -29,6 +29,13 @@ jQuery(document).ready(function ($) {
         });
     });
 
+
+    $('.navbar .menu-item-has-children').on('mouseleave', function () {
+        var sub = $(this).find('.sub-menu-1');
+        sub.addClass('hide-menu');
+        sub.removeClass('show-menu');
+    });
+
     //Submenu level 2
     $('.navbar .menu-item-has-children .menu-item-has-children').on('mouseenter', function () {
         var sub2 = $(this).find('.sub-menu-2');
@@ -58,4 +65,5 @@ jQuery(document).ready(function ($) {
         var sub = $(this).siblings('.sub-menu-2');
         sub.toggle();
     });
+
 });

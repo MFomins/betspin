@@ -95,17 +95,11 @@ function betspin_unregister_widgets()
 //Add stylesheets and JS files
 function betspin_scripts()
 {
-    //Normalize CSS
-    wp_enqueue_style('normalize', BETSPIN_DIR_URI . '/dist/css/normalize.css', array(), '8.0.1');
-
-    //Fontello CSS
-    wp_enqueue_style('fontello', BETSPIN_DIR_URI . '/dist/css/fontello/fontello-embedded.css', array(), '1.0.0');
-
     //Main stylesheet
-    wp_enqueue_style('betspin-main', get_stylesheet_uri(), array('normalize'), '1.0.26');
+    wp_enqueue_style('betspin-main', get_stylesheet_uri(), array(), '1.0.27');
 
     /** Load main JavaScript files */
-    wp_enqueue_script('betspin-scripts', BETSPIN_DIR_URI . '/dist/js/scripts.js', array('jquery'), '1.0.3', true);
+    wp_enqueue_script('betspin-scripts', BETSPIN_DIR_URI . '/dist/js/scripts.js', array('jquery'), '1.0.4', true);
 }
 
 //Create the menus
@@ -219,4 +213,3 @@ add_action('after_setup_theme', 'betspin_setup');
 
 //Unregister widgets
 add_action('widgets_init', 'betspin_unregister_widgets');
-
