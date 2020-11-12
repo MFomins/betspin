@@ -12,7 +12,7 @@
                 <div class="text-secondary">Play live games and feel the same <br> exitement as if you sat in real casino</div>
                 <div class="homepage-button">
                     <div class="btn-left">
-                        <img src="<?php echo BETSPIN_DIR_URI . "/dist/img/explore.png" ?>" alt="">
+                        <img src="<?php echo BETSPIN_DIR_URI . "/dist/img/explore.png" ?>" alt="explore icon">
                     </div>
                     <div class="btn-right">
                         <a href="#live-roulette"> <i class="icon-down-open"></i> Get your seat at the table</a>
@@ -26,7 +26,7 @@
     <div class="page-content">
         <?php if (!is_front_page()) : ?>
             <div class="header-elements">
-                <img src="<?php echo BETSPIN_DIR_URI . "/dist/img/live-casinos.png" ?>" alt="Cards">
+                <img src="<?php echo BETSPIN_DIR_URI . "/dist/img/live-casinos.png" ?>" alt="cards">
                 <h1><?php echo the_title(); ?></h1>
             </div>
             <div class="breadcrumbs">
