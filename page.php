@@ -9,7 +9,7 @@
         <div class="head-info-text container">
             <div class="head-info-wrap">
                 <div class="text-main"><span>LIVE CASINOS</span></div>
-                <div class="text-secondary">Play live games and feel the same <br> exitement as if you sat in real casino</div>
+                <div class="text-secondary">Play live games and feel the same <br> excitement as if you sat in real casino</div>
                 <div class="homepage-button">
                     <div class="btn-left">
                         <img src="<?php echo BETSPIN_DIR_URI . "/dist/img/explore.png" ?>" alt="explore icon">
@@ -41,4 +41,3 @@
     </div>
 </main>
 <?php get_footer(); ?>
-
