@@ -1,15 +1,16 @@
 jQuery(document).ready(function ($) {
     //Open search
+
     $('.search-icon').on('click', function () {
-        $('.search-overlay').css('display', 'flex');
-        $('body').css('overflow-y', 'hidden');
-        $('.nav-search .icon-search').hide();
+        $(this).css('display', 'none');
+        $('.search-close').css('display', 'block');
+        $('.navbar .search-form').css('display', 'flex');
     });
 
-    $('.overlay-close').on('click', function () {
-        $('.search-overlay').css('display', 'none');
-        $('body').css('overflow-y', 'initial');
-        $('.nav-search .icon-search').show();
+    $('.search-close').on('click', function () {
+        $(this).css('display', 'none');
+        $('.search-icon').css('display', 'block');
+        $('.navbar .search-form').css('display', 'none');
     });
 
     //Mobile menu

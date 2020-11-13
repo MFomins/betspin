@@ -762,6 +762,12 @@ table p {
     cursor: pointer;
 }
 
+.navbar .search-icon {
+    position: absolute;
+    right   : 0;
+    top     : 10px;
+}
+
 .navbar .search-icon:hover {
     cursor: pointer;
 }
@@ -1347,9 +1353,9 @@ table p {
 }
 
 .page-content h2 {
-    margin-bottom : 1rem;
-    font-weight   : 400;
-    font-size     : 2.2rem;
+    margin-bottom: 1rem;
+    font-weight  : 400;
+    font-size    : 2.2rem;
 }
 
 .page-content h3 {
@@ -2336,3 +2342,58 @@ input#awf_field-109168814 {
 }
 
 /* '' */
+
+
+
+/* Style header nav search */
+
+.navbar {
+    position: relative;
+}
+
+.navbar #searchform {
+    position: absolute;
+    right   : 15px;
+}
+
+.search-close {
+    display    : none;
+    font-weight: bold;
+    position   : absolute;
+    right      : -5px;
+    top        : 15px;
+}
+
+.search-close:hover {
+    cursor: pointer;
+}
+
+.navbar .search-form {
+    display: none;
+}
+
+.navbar .search-form input {
+    border       : none;
+    border-bottom: 2px solid #e2e2e2;
+    outline      : none;
+    width        : 170px;
+}
+
+.navbar .search-form button {
+    border          : none;
+    background-color: #e91b25;
+    outline         : none;
+
+}
+
+.navbar .search-form button:hover {
+    cursor: pointer;
+}
+
+.navbar .search-form i {
+    color: #fff;
+}
+
+.show-search {
+    display: flex !important;
+}

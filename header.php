@@ -8,12 +8,6 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <div class="search-overlay">
-        <div class="overlay-close">X</div>
-        <div class="overlay-search-form">
-            <?php get_search_form(true); ?>
-        </div>
-    </div>
     <div class="slideout-menu">
         <?php if (has_nav_menu('mobile-menu')) : ?>
             <?php
@@ -43,8 +37,12 @@
                     ?>
                 <?php endif; ?>
             </div>
+
+            <?php get_search_form(true); ?>
+
             <div class="nav-search">
                 <div class="search-icon"><i class="icon-search"></i></div>
+                <div class="search-close">x</div>
             </div>
         </div>
         <div class="mobile-menu">
