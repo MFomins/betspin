@@ -6,7 +6,7 @@
                 <div class="footer-col">
 
                     <span><?php $menu = wp_get_nav_menu_name("footer-1");
-                        echo $menu; ?></span>
+                            echo $menu; ?></span>
                     <?php
                     $args = array(
                         'theme_location' => 'footer-1',
@@ -22,7 +22,7 @@
             <?php if (has_nav_menu('footer-2')) : ?>
                 <div class="footer-col">
                     <span><?php $menu = wp_get_nav_menu_name("footer-2");
-                        echo $menu; ?></span>
+                            echo $menu; ?></span>
                     <?php
                     $args = array(
                         'theme_location' => 'footer-2',
@@ -38,7 +38,7 @@
             <?php if (has_nav_menu('footer-3')) : ?>
                 <div class="footer-col">
                     <span><?php $menu = wp_get_nav_menu_name("footer-3");
-                        echo $menu; ?></span>
+                            echo $menu; ?></span>
                     <?php
                     $args = array(
                         'theme_location' => 'footer-3',
@@ -54,7 +54,7 @@
             <?php if (has_nav_menu('footer-4')) : ?>
                 <div class="footer-col">
                     <span><?php $menu = wp_get_nav_menu_name("footer-4");
-                        echo $menu; ?></span>
+                            echo $menu; ?></span>
                     <?php
                     $args = array(
                         'theme_location' => 'footer-4',
@@ -88,8 +88,16 @@
             endif;
             ?>
         </div>
-        <div class="footer-text-field">
-            <?php the_field('footer_text', 'options'); ?>
+        <div class="footer-text-socials">
+            <div class="footer-text">
+                <?php the_field('footer_text', 'options'); ?>
+            </div>
+            <div class="footer-socials">
+                <a href="https://www.facebook.com/betspinofficial" target="_blank"><img src="<?php echo BETSPIN_DIR_URI . '/dist/img/socials-facebook.png'; ?>" alt="facebook"></a>
+                <a href="https://www.youtube.com/channel/UC3Q1xwrFgEYbmo3ZQOXGpsw" target="_blank"><img src="<?php echo BETSPIN_DIR_URI . '/dist/img/socials-youtube.png'; ?>" alt="youtube"></a>
+                <a href="https://twitter.com/betspinofficial" target="_blank"><img src="<?php echo BETSPIN_DIR_URI . '/dist/img/socials-twitter.png'; ?>" alt="twitter"></a>
+                <a href="https://www.instagram.com/betspin_official/" target="_blank"><img src="<?php echo BETSPIN_DIR_URI . '/dist/img/socials-instagram.png'; ?>" alt="instagram"></a>
+            </div>
         </div>
     </div>
     <?php if (get_field('footer_copyrights', 'options')) : ?>

@@ -96,10 +96,10 @@ function betspin_unregister_widgets()
 function betspin_scripts()
 {
     //Main stylesheet
-    //wp_enqueue_style('betspin-main', get_stylesheet_uri(), array(), '1.0.30');
+    // wp_enqueue_style('betspin-main', get_stylesheet_uri(), array(), '1.0.30');
 
     //Min Main Css
-    wp_enqueue_style('betspin-main', BETSPIN_DIR_URI . '/dist/css/style.min.css', array(), '1.0.2');
+    wp_enqueue_style('betspin-main', BETSPIN_DIR_URI . '/dist/css/style.min.css', array(), '1.0.4');
 
     /** Load main JavaScript files */
     wp_enqueue_script('betspin-scripts', BETSPIN_DIR_URI . '/dist/js/scripts.js', array('jquery'), '1.0.6', true);
