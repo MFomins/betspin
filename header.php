@@ -26,6 +26,11 @@
 </head>
 
 <body <?php body_class(); ?>>
+    <?php
+    if (isset($_GET['aweber']) && $_GET['aweber'] == 'success') {
+        site_popup();
+    }
+    ?>
     <div class="slideout-menu">
         <?php if (has_nav_menu('mobile-menu')) : ?>
             <?php

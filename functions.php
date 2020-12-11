@@ -99,10 +99,10 @@ function betspin_scripts()
     // wp_enqueue_style('betspin-main', get_stylesheet_uri(), array(), '1.0.30');
 
     //Min Main Css
-    wp_enqueue_style('betspin-main', BETSPIN_DIR_URI . '/dist/css/style.min.css', array(), '1.0.4');
+    wp_enqueue_style('betspin-main', BETSPIN_DIR_URI . '/dist/css/style.min.css', array(), '1.0.5');
 
     /** Load main JavaScript files */
-    wp_enqueue_script('betspin-scripts', BETSPIN_DIR_URI . '/dist/js/scripts.js', array('jquery'), '1.0.6', true);
+    wp_enqueue_script('betspin-scripts', BETSPIN_DIR_URI . '/dist/js/scripts.js', array('jquery'), '1.0.7', true);
 }
 
 //Create the menus
@@ -216,3 +216,16 @@ add_action('after_setup_theme', 'betspin_setup');
 
 //Unregister widgets
 add_action('widgets_init', 'betspin_unregister_widgets');
+
+
+function site_popup()
+{
+    $popup = '';
+    $popup .= '<div class="popup">';
+    $popup .= '<span class="popup-close">&#215;</span>';
+    $popup .= '<span class="popup-title">Thank you for subscribing!</span>';
+    $popup .= '<span>You are now part of <strong>Betspin</strong> extraordinary group of friends! Our best offers are on the way to your email.</span>';
+    $popup .= '</div>';
+
+    echo $popup;
+}

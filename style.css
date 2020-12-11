@@ -2410,7 +2410,7 @@ input#awf_field-109168814 {
     text-align   : left;
     margin-bottom: 1.5rem;
     flex         : 0 0 70%;
-    margin-right: 1.5rem;
+    margin-right : 1.5rem;
 }
 
 .footer-socials {
@@ -2421,9 +2421,9 @@ input#awf_field-109168814 {
 
 .footer-socials img {
     margin-right: 10px;
-    width:50px;
-    height: 50px;
-    object-fit: contain;
+    width       : 50px;
+    height      : 50px;
+    object-fit  : contain;
 
 }
 
@@ -2433,12 +2433,49 @@ input#awf_field-109168814 {
 
 @media (max-width:767px) {
     .footer-text-socials {
-        display: flex;
+        display       : flex;
         flex-direction: column;
     }
 
     .footer-socials {
         justify-content: center;
-        margin-bottom: 20px;
+        margin-bottom  : 20px;
     }
+}
+
+.popup {
+    position     : fixed;
+    animation    : fadein ease 1s;
+    top          : 50%;
+    left         : 50%;
+    background   : rgba(0, 0, 0, 0.9);
+    color        : #fff;
+    transform    : translate(-50%, -50%);
+    padding      : 20px;
+    border-radius: 10px;
+    z-index      : 100;
+}
+
+.popup span {
+    font-size: 18px;
+}
+
+span.popup-close {
+    position   : absolute;
+    right      : 20px;
+    top        : 0;
+    font-size  : 20px;
+    font-weight: bold;
+}
+
+span.popup-close:hover {
+    cursor: pointer;
+}
+
+
+span.popup-title {
+    display    : block;
+    text-align : center;
+    font-size  : 30px;
+    font-weight: bold;
 }

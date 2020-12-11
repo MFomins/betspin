@@ -67,4 +67,8 @@ jQuery(document).ready(function ($) {
         sub.toggle();
     });
 
+    //Hide popup
+    $(".popup-close").on('click', function () {
+        $(".popup").hide();
+    });
 });
