@@ -96,7 +96,7 @@ function betspin_unregister_widgets()
 function betspin_scripts()
 {
     //Main stylesheet
-    wp_enqueue_style('betspin-main', get_stylesheet_uri(), array(), '1.0.31');
+    wp_enqueue_style('betspin-main', get_stylesheet_uri(), array(), '1.0.32');
 
     //Google font
     wp_enqueue_style('font', 'https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
@@ -228,6 +228,7 @@ function site_popup()
     $popup .= '<span class="popup-close">&#215;</span>';
     $popup .= '<span class="popup-title">Thank you for subscribing!</span>';
     $popup .= '<span>You are now part of <strong>Betspin</strong> extraordinary group of friends! Our best offers are on the way to your email.</span>';
+    $popup .= '<img class="popup-logo" src="' . BETSPIN_DIR_URI . "/dist/img/betspin-logo-popup.png" . '" alt="Betspin logo">';
     $popup .= '</div>';
 
     echo $popup;
