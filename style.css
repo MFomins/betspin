@@ -1162,17 +1162,18 @@ table p {
 /* Front page header block */
 
 .front-page-head {
-    background: #000000;
-    background: -webkit-linear-gradient(to right, #434343, #000000);
-    background: linear-gradient(to right, #434343, #000000);
-    padding   : 22rem 0 4rem;
-    text-align: center;
-    position  : relative;
+    background : #000000;
+    background : -webkit-linear-gradient(to right, #434343, #000000);
+    background : linear-gradient(to right, #434343, #000000);
+    padding    : 16rem 0 12rem;
+    text-align : center;
+    position   : relative;
+    font-family: 'Bebas Neue', cursive;
 }
 
 @media (min-width:768px) {
     .front-page-head {
-        background-image : url(dist/img/chips-lightning-roulette-min.png);
+        background-image : url(dist/img/homepage-banner.jpg);
         background-repeat: no-repeat;
         background-size  : cover;
     }
@@ -1233,14 +1234,14 @@ table p {
 
 .front-page-head .text-main span {
     color      : #e91b25;
-    font-size  : 7rem;
+    font-size  : 8rem;
     font-weight: 500;
 }
 
 .front-page-head .text-secondary {
     color         : #fff;
     text-transform: uppercase;
-    font-size     : 1.9rem;
+    font-size     : 2.2rem;
     line-height   : 2.5rem;
     margin-bottom : 2rem;
 }
@@ -1279,13 +1280,15 @@ table p {
 
 .front-page-head .homepage-button .btn-right i {
     font-size: 1.9rem;
+    margin-top: -.2rem;
+    margin-right: .5rem;
 }
 
 .front-page-head .homepage-button .btn-right a {
     color         : #fff;
     text-transform: uppercase;
     font-weight   : 500;
-    font-size     : 2rem;
+    font-size     : 2.4rem;
     display       : flex;
     align-items   : center;
 }
