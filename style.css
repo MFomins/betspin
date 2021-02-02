@@ -1545,7 +1545,7 @@ table p {
 
 @media (max-width:767px) {
     .casino-deal-block {
-        padding          : 100px 0;
+        padding: 100px 0;
     }
 }
 
@@ -2471,4 +2471,29 @@ span.popup-title {
     text-align : center;
     font-size  : 30px;
     font-weight: bold;
+}
+
+/* TOC styles */
+div#toc {
+    margin : 20px 0;
+    padding: 10px;
+}
+
+#toc ul {
+    padding  : 0;
+    margin   : 0;
+    display  : flex;
+    flex-wrap: wrap;
+}
+
+#toc li {
+    margin    : 0;
+    text-align: center;
+    font-size : 14px;
+    flex      : 0 0 19%;
+    margin    : 10px 0;
+}
+
+#toc li::before {
+    display: none;
 }
