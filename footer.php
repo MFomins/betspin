@@ -92,12 +92,7 @@
             <div class="footer-text">
                 <?php the_field('footer_text', 'options'); ?>
             </div>
-            <div class="footer-socials">
-                <a href="https://www.facebook.com/betspinofficial" target="_blank"><img src="<?php echo BETSPIN_DIR_URI . '/dist/img/socials-facebook.png'; ?>" alt="facebook"></a>
-                <a href="https://www.youtube.com/channel/UC3Q1xwrFgEYbmo3ZQOXGpsw" target="_blank"><img src="<?php echo BETSPIN_DIR_URI . '/dist/img/socials-youtube.png'; ?>" alt="youtube"></a>
-                <a href="https://twitter.com/betspinofficial" target="_blank"><img src="<?php echo BETSPIN_DIR_URI . '/dist/img/socials-twitter.png'; ?>" alt="twitter"></a>
-                <a href="https://www.instagram.com/betspin_official/" target="_blank"><img src="<?php echo BETSPIN_DIR_URI . '/dist/img/socials-instagram.png'; ?>" alt="instagram"></a>
-            </div>
+            <?php echo betspin_socials(); ?>
         </div>
     </div>
     <?php if (get_field('footer_copyrights', 'options')) : ?>

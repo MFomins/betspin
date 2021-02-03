@@ -27,7 +27,8 @@
             <div class="breadcrumbs">
                 <?php if (function_exists('rank_math_the_breadcrumbs')) rank_math_the_breadcrumbs(); ?>
             </div>
-            <div id="toc">
+            <div id="toc" style="display: none;">
+                <span>Table of Contents</span>
                 <ul data-toc data-toc-headings="h2"></ul>
             </div>
         <?php endif; ?>
@@ -37,5 +38,10 @@
             </div>
         <?php endwhile; ?>
     </div>
+    <?php if (is_page('414')) : ?>
+        <div style="display: flex;justify-content:center;padding:10px 0;">
+            <?php echo betspin_socials(); ?>
+        </div>
+    <?php endif; ?>
 </main>
 <?php get_footer(); ?>
