@@ -71,4 +71,5 @@ jQuery(document).ready(function ($) {
     $(".popup-close").on('click', function () {
         $(".popup").hide();
     });
+
 });

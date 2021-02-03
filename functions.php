@@ -247,3 +247,18 @@ function betspin_socials()
     </div>
 <?php
 }
+
+
+function betspin_generate_toc()
+{
+    $toc = "";
+    $toc .= '<div id="toc">';
+    $toc .= '<p>Contents</p>';
+    $toc .= '<ul data-toc data-toc-headings="h2"></ul>';
+    $toc .= '</div>';
+
+    return $toc;
+}
+
+
+add_shortcode('betspin_toc', 'betspin_generate_toc');

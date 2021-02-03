@@ -27,10 +27,6 @@
             <div class="breadcrumbs">
                 <?php if (function_exists('rank_math_the_breadcrumbs')) rank_math_the_breadcrumbs(); ?>
             </div>
-            <div id="toc" style="display: none;">
-                <span>Table of Contents</span>
-                <ul data-toc data-toc-headings="h2"></ul>
-            </div>
         <?php endif; ?>
         <?php while (have_posts()) : the_post(); ?>
             <div class="text-center">
