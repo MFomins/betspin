@@ -2635,9 +2635,12 @@ span.popup-title {
     margin        : 0 !important;
     font-size     : 14px;
     letter-spacing: -1px;
-    margin-bottom : 8px !important;
-    width         : 100%;
-    align-self    : flex-start;
+    width     : 100%;
+    align-self: flex-start;
+}
+
+.selling_points li:not(:last-child) {
+    margin-bottom: 8px !important;
 }
 
 /* Total games */
@@ -2680,8 +2683,12 @@ span.popup-title {
     font-weight     : 500;
     text-transform  : uppercase;
     font-size       : 16px;
-    padding         : 15px 50px;
+    padding         : 15px 65px;
     border-radius   : 5px;
+}
+
+.toplists-container .cta a:hover {
+    background-color: #45d451;
 }
 
 /* Review button */
@@ -2692,6 +2699,10 @@ span.popup-title {
 }
 
 /* Hercules T&C */
+.toplists-container .terms_conditions {
+    margin-top: 5px;
+}
+
 .toplists-container .terms_conditions p {
     font-size  : 9px;
     margin     : 0;
@@ -2725,7 +2736,7 @@ span.popup-title {
         width     : 45%;
         position  : absolute;
         height    : initial !important;
-        min-height: 75px;
+        min-height: 85px;
         padding   : 10px;
     }
 
