@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 const MyCustomImage = data => {
-    return <div className="logo">
+    return <div className="logo-main">
+        <span className="id"></span>
         <img src={data.image_url + data.logo_name} alt="logo" className="logo"></img>
         <div className="casino-name">
             {data.name}

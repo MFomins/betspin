@@ -68,9 +68,6 @@ jQuery(document).ready(function ($) {
     $(".popup-close").on('click', function () {
         $(".popup").hide();
     });
-
-    $(".selling_points li").before( "<p>Test</p>" );
-
 });
 
 /*
