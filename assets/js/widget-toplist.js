@@ -32,9 +32,15 @@ const additionalElement = data => {
     </div>
 };
 
+const MyCustomCTA = data => {
+    return <div className="cta align-center">
+        <a href={data.operatorLink} target="_blank" className="play_button">{data.play_text}</a>
+    </div>;
+};
+
 //First toplist
 window.herculesWidgetOverrides['customImage-live_casinos'] = MyCustomImage;
 window.herculesWidgetOverrides['customInfo-live_casinos'] = MyCustomBonus;
-
+window.herculesWidgetOverrides['customCta-live_casinos'] = MyCustomCTA;
 window.herculesWidgetOverrides['additionalElement-live_casinos'] = additionalElement;
 

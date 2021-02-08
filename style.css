@@ -2533,6 +2533,7 @@ span.popup-title {
     grid-template-columns: 1.2fr 1.5fr 1fr 1fr 1.4fr .4fr;
 }
 
+
 .toplists-container .item>* {
     height         : 100%;
     display        : flex;
@@ -2562,7 +2563,7 @@ span.popup-title {
     color          : #fff;
     padding        : 10px;
     border-radius  : 100px;
-    font-size      : 16px;
+    font-size      : 14px;
     width          : 28px;
     height         : 28px;
     display        : flex;
@@ -2665,7 +2666,6 @@ span.popup-title {
     border-radius   : 5px;
 }
 
-
 /* Review button */
 .review_button {
     font-size     : 12px;
@@ -2679,4 +2679,58 @@ span.popup-title {
     margin     : 0;
     line-height: 15px;
     color      : #716f6f;
+}
+
+@media (max-width:767px) {
+    .logo-main {
+        padding: 0 0 135px 0;
+    }
+
+    .logo-main .id {
+        width    : 48px;
+        height   : 48px;
+        font-size: 20px;
+    }
+
+    .toplists-container .item {
+        display       : flex;
+        flex-direction: column;
+        position      : relative;
+    }
+
+    .selling_points {
+        display: none !important;
+    }
+
+    .main-bonus,
+    .total-games {
+        width     : 45%;
+        position  : absolute;
+        height    : initial !important;
+        min-height: 75px;
+        padding   : 10px;
+    }
+
+    .main-bonus {
+        left: 10px;
+        top : 130px;
+    }
+
+    .total-games {
+        right: 10px;
+        top  : 130px;
+    }
+
+    .main-bonus,
+    .total-games {
+        background-color: #dbebf8;
+    }
+
+    .item .cta {
+        margin-bottom: 10px;
+    }
+
+    .item .terms_conditions {
+        margin-top: 10px;
+    }
 }
