@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 const MyCustomImage = data => {
     return <div className="logo-main">
-        <span className="id" style={{backgroundColor: data.extra_fields.ribbon_color}}></span>
+        <span className="id" style={{ backgroundColor: data.extra_fields.ribbon_color }}></span>
         <img src={data.image_url + data.logo_name} alt="logo" className="logo"></img>
         <div className="casino-name">
             {data.name}
@@ -16,7 +16,7 @@ const MyCustomBonus = data => {
         <div className="bonus-line">
             {data.oneliner}
         </div>
-        <div className="bonus-label" style={{backgroundColor: data.extra_fields.ribbon_color}}>
+        <div className="bonus-label" style={{ backgroundColor: data.extra_fields.ribbon_color }}>
             {data.extra_fields.ribbon}
         </div>
     </div>
@@ -57,6 +57,6 @@ window.herculesWidgetOverrides['customInfo-live_casinos'] = MyCustomBonus;
 window.herculesWidgetOverrides['additionalElement-live_casinos'] = additionalElement;
 window.herculesWidgetOverrides['customCta-live_casinos'] = MyCustomCTA;
 window.herculesWidgetOverrides['customReview-live_casinos'] = MyCustomReview;
-window.herculesWidgetOverrides['customTermsConditions-live_casinos'] = MyCustomTerms;
+window.herculesWidgetOverrides['customTermsAndConditions-live_casinos'] = MyCustomTerms;
 
 
