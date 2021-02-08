@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 const MyCustomImage = data => {
     return <div className="logo-main">
-        <span className="id"></span>
+        <span className="id" style={{backgroundColor: data.extra_fields.ribbon_color}}></span>
         <img src={data.image_url + data.logo_name} alt="logo" className="logo"></img>
         <div className="casino-name">
             {data.name}
@@ -16,7 +16,8 @@ const MyCustomBonus = data => {
         <div className="bonus-line">
             {data.oneliner}
         </div>
-        <div className="bonus-label">
+        <div className="bonus-label" style={{backgroundColor: data.extra_fields.ribbon_color}}>
+            {data.extra_fields.ribbon}
         </div>
     </div>
 }
@@ -38,9 +39,24 @@ const MyCustomCTA = data => {
     </div>;
 };
 
+const MyCustomReview = data => {
+    return <div className="review align-center">
+        <a href={data.review_link} target="_blank" className="review_button">{data.review_text}</a>
+    </div>;
+};
+
+// const MyCustomTerms = data => {
+//     return <div className="terms_conditions">
+//         <p>Custom terms</p>
+//     </div>
+// };
+
 //First toplist
 window.herculesWidgetOverrides['customImage-live_casinos'] = MyCustomImage;
 window.herculesWidgetOverrides['customInfo-live_casinos'] = MyCustomBonus;
-window.herculesWidgetOverrides['customCta-live_casinos'] = MyCustomCTA;
 window.herculesWidgetOverrides['additionalElement-live_casinos'] = additionalElement;
+window.herculesWidgetOverrides['customCta-live_casinos'] = MyCustomCTA;
+window.herculesWidgetOverrides['customReview-live_casinos'] = MyCustomReview;
+// window.herculesWidgetOverrides['customTermsAndConditions-live_casinos'] = MyCustomTerms;
+
 

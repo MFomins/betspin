@@ -2530,7 +2530,8 @@ span.popup-title {
     border-radius        : 10px;
     grid-row-gap         : 0;
     padding              : 10px;
-    grid-template-columns: 1.2fr 1.5fr 1fr 1fr 1.4fr .4fr;
+    grid-template-columns: 1.1fr 1.3fr 1fr 1fr 1.4fr .4fr;
+    grid-column-gap      : 0;
 }
 
 
@@ -2595,6 +2596,7 @@ span.popup-title {
 /* Main bonus*/
 .main-bonus {
     justify-self: flex-start;
+    width       : 100%;
 }
 
 .bonus-line {
@@ -2604,7 +2606,23 @@ span.popup-title {
     letter-spacing: -1px;
 }
 
+.bonus-label {
+    background    : #dd9933;
+    color         : #fff;
+    font-size     : 12px;
+    font-weight   : 500;
+    padding       : 0 5px;
+    border-radius : 5px;
+    line-height   : 20px;
+    margin-top    : 5px;
+    text-transform: uppercase;
+}
+
 /* Selling points */
+.item .selling_points {
+    padding-left: 45px;
+}
+
 .item .selling_points li::before {
     display         : block !important;
     background-image: url(dist/img/tick.png);
