@@ -2563,13 +2563,38 @@ span.popup-title {
     border-radius : 5px;
     font-size     : 12px;
     letter-spacing: -1px;
-    margin-top: 10px;
+    margin-top    : 10px;
+}
+
+/* Main bonus*/
+.main-bonus {
+    justify-self: flex-start;
+}
+
+.bonus-line {
+    line-height   : 20px;
+    text-align    : center;
+    font-size     : 16px;
+    letter-spacing: -1px;
 }
 
 /* Selling points */
+.item .selling_points li::before {
+    display: block!important;
+    background-image   : url(dist/img/tick.png);
+    content            : '';
+    width              : 18px;
+    height             : 18px;
+    position           : absolute;
+    background-size    : cover;
+    background-position: center;
+    left               : -2.5rem;
+    top                : 50%;
+    transform          : translateY(-50%);
+}
+
 .selling_points li {
     margin        : 0 !important;
-    line-height   : 25px;
     font-size     : 14px;
     letter-spacing: -1px;
     margin-bottom : 8px !important;

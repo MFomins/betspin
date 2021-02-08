@@ -1,22 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const MyCustomImage = item => {
+const MyCustomImage = data => {
     return <div className="logo">
-        <img src={item.image_url + item.logo_name} alt="logo" className="logo"></img>
+        <img src={data.image_url + data.logo_name} alt="logo" className="logo"></img>
         <div className="casino-name">
-            {item.name}
+            {data.name}
         </div>
     </div>;
 };
 
-const MyCustomBonus = item => {
+const MyCustomBonus = data => {
     return <div className="main-bonus">
         <div className="bonus-line">
-            100% Match Bonus
+            {data.oneliner}
         </div>
         <div className="bonus-label">
-            Trusted
         </div>
     </div>
 }
@@ -24,10 +23,10 @@ const MyCustomBonus = item => {
 const additionalElement = data => {
     return <div className="total-games">
         <div className="total-slot-games">
-            <span>452</span> slot games
+            <span>{data.data.extra_fields.slot_games}</span> slot games
         </div>
         <div className="total-live-games">
-            <span>57</span> live games
+            <span>{data.data.extra_fields.live_games}</span> live games
         </div>
     </div>
 };
