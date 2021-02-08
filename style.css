@@ -3,8 +3,8 @@ Theme Name: Betspin Theme
 Theme URI: https://yoursite.lv/
 Author: KR
 Author URI: https://yoursite.lv/
-Description: Custom casino theme
-Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
+Description: Custom casino theme for Betspin with Hercules toplists
+Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu
 Version: 1.0.0
 Requires at least: 5.0
 Tested up to: 5.4
@@ -2518,4 +2518,121 @@ span.popup-title {
     #toc {
         width: 100%;
     }
+}
+
+/* Styles for Hercules toplist */
+.toplists-container ul {
+    padding: 0;
+}
+
+.toplists-container .item {
+    box-shadow           : 0 1px 8px 0 rgb(0 0 0 / 10%);
+    border-radius        : 10px;
+    grid-row-gap         : 0;
+    padding              : 10px;
+    grid-template-columns: 1.2fr 1.5fr 1fr 1fr 1.4fr .4fr;
+}
+
+.toplists-container .item>* {
+    height         : 100%;
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items    : center;
+    margin         : 0;
+}
+
+.toplists-container ul li::before {
+    display: none;
+}
+
+/* Hercules widget logo column */
+.toplists-container .logo {}
+
+.toplists-container .logo img {
+    width     : 130px;
+    height    : 55px;
+    object-fit: contain;
+}
+
+/* Hercules main bonus column */
+.toplists-container .casino-name {
+    background    : #e8e8e8;
+    line-height   : 20px;
+    padding       : 0 5px;
+    border-radius : 5px;
+    font-size     : 12px;
+    letter-spacing: -1px;
+    margin-top: 10px;
+}
+
+/* Selling points */
+.selling_points li {
+    margin        : 0 !important;
+    line-height   : 25px;
+    font-size     : 14px;
+    letter-spacing: -1px;
+    margin-bottom : 8px !important;
+    width         : 100%;
+    align-self    : flex-start;
+}
+
+/* Total games */
+.total-slot-games {
+    color         : #333;
+    font-size     : 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height   : 17px;
+    font-weight   : 500;
+    border-bottom : 1px solid #d0d0d0;
+}
+
+.total-slot-games span {
+    color      : #333;
+    font-size  : 16px;
+    font-weight: 500;
+    display    : block;
+    text-align : center;
+}
+
+.total-live-games {
+    color         : #333;
+    font-size     : 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height   : 17px;
+    font-weight   : 500;
+}
+
+.total-live-games span {
+    color      : #f43d45;
+    font-weight: 700;
+}
+
+/* Hercules CTA button */
+.toplists-container .cta a {
+    background-color: #3ec148;
+    color           : #fff;
+    font-weight     : 500;
+    text-transform  : uppercase;
+    font-size       : 16px;
+    padding         : 15px 50px;
+    border-radius   : 5px;
+}
+
+
+/* Review button */
+.review_button {
+    font-size     : 12px;
+    color         : #0087c6;
+    letter-spacing: -1px;
+}
+
+/* Hercules T&C */
+.toplists-container .terms_conditions p {
+    font-size  : 9px;
+    margin     : 0;
+    line-height: 15px;
+    color      : #716f6f;
 }
