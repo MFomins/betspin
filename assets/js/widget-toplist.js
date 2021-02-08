@@ -41,15 +41,15 @@ const MyCustomCTA = data => {
 
 const MyCustomReview = data => {
     return <div className="review align-center">
-        <a href={data.review_link} target="_blank" className="review_button">{data.review_text}</a>
+        <a href={data.review_link} className="review_button">{data.review_text}</a>
     </div>;
 };
 
-// const MyCustomTerms = data => {
-//     return <div className="terms_conditions">
-//         <p>Custom terms</p>
-//     </div>
-// };
+const MyCustomTerms = data => {
+    return <div className="terms_conditions">
+        <p>{data.operatorLink}</p>
+    </div>
+};
 
 //First toplist
 window.herculesWidgetOverrides['customImage-live_casinos'] = MyCustomImage;
@@ -57,6 +57,6 @@ window.herculesWidgetOverrides['customInfo-live_casinos'] = MyCustomBonus;
 window.herculesWidgetOverrides['additionalElement-live_casinos'] = additionalElement;
 window.herculesWidgetOverrides['customCta-live_casinos'] = MyCustomCTA;
 window.herculesWidgetOverrides['customReview-live_casinos'] = MyCustomReview;
-// window.herculesWidgetOverrides['customTermsAndConditions-live_casinos'] = MyCustomTerms;
+window.herculesWidgetOverrides['customTermsConditions-live_casinos'] = MyCustomTerms;
 
 
