@@ -106,7 +106,7 @@ function betspin_scripts()
 
     /** Load main JavaScript files */
     wp_enqueue_script('betspin-scripts', BETSPIN_DIR_URI . '/dist/js/scripts.js', array('jquery'), '1.0.0', true);
-    wp_enqueue_script('toplist', BETSPIN_DIR_URI . '/assets/dist/front.js', array(), '1.0.13', true);
+    wp_enqueue_script('toplist', BETSPIN_DIR_URI . '/assets/dist/front.js', array(), '1.0.14', true);
 }
 
 //Create the menus

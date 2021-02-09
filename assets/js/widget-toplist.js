@@ -45,13 +45,13 @@ const additionalElement = data => {
 
 const MyCustomCTA = data => {
     return <div className="cta align-center">
-        <a href={data.operatorLink} target="_blank" className="play_button"><img src={pathname + "explore.png"} alt="explore" className="explore"></img>{data.play_text}</a>
+        <a href={data.operatorLink} target="_blank" className="play_button"><img src={pathname + "explore.png"} alt="explore" className="explore"></img>CLAIM BONUS</a>
     </div>;
 };
 
 const MyCustomReview = data => {
     return <div className="review align-center">
-        <a href={data.review_link} className="review_button">{data.review_text}</a>
+        <a href={data.review_link} className="review_button">{data.name} {data.review_text}</a>
     </div>;
 };
 
