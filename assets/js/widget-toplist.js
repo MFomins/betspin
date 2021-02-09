@@ -24,6 +24,14 @@ const MyCustomBonus = data => {
     </div>
 }
 
+const MyCustomPros = data => {
+    return <ul className="selling_points">
+        <li>{data.extra_fields.pro1}</li>
+        <li>{data.extra_fields.pro2}</li>
+        <li>{data.extra_fields.pro3}</li>
+    </ul>
+}
+
 const additionalElement = data => {
     return <div className="total-games">
         <div className="total-slot-games">
@@ -57,9 +65,11 @@ const MyCustomTerms = data => {
     </div>;
 };
 
+
 //First toplist
 window.herculesWidgetOverrides['customImage-live_casinos'] = MyCustomImage;
 window.herculesWidgetOverrides['customInfo-live_casinos'] = MyCustomBonus;
+window.herculesWidgetOverrides['customSellingPoints-live_casinos'] = MyCustomPros;
 window.herculesWidgetOverrides['additionalElement-live_casinos'] = additionalElement;
 window.herculesWidgetOverrides['customCta-live_casinos'] = MyCustomCTA;
 window.herculesWidgetOverrides['customReview-live_casinos'] = MyCustomReview;
