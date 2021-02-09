@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+const pathname = "/wp-content/themes/betspintheme/dist/img/";
+
 const MyCustomImage = data => {
     return <div className="logo-main">
         <span className="id" style={{ backgroundColor: data.extra_fields.ribbon_color }}></span>
@@ -35,7 +37,7 @@ const additionalElement = data => {
 
 const MyCustomCTA = data => {
     return <div className="cta align-center">
-        <a href={data.operatorLink} target="_blank" className="play_button">{data.play_text}</a>
+        <a href={data.operatorLink} target="_blank" className="play_button"><img src={pathname + "explore.png"} alt="explore" className="explore"></img>{data.play_text}</a>
     </div>;
 };
 
