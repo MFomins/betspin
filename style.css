@@ -2698,7 +2698,7 @@ span.popup-title {
 .explore {
     position : absolute;
     top      : 50%;
-    left:50px;
+    left:35px;
     transform: translate(0, -50%);
     max-width: 24px;
 }
