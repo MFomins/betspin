@@ -2732,7 +2732,14 @@ span.popup-title {
 /* Hercules T&C */
 .toplists-container .terms_conditions {
     margin-top: 5px;
+    justify-self: flex-start;
 }
+
+.toplists-container .terms_conditions a{
+    margin-left: 3px;
+}
+
+
 
 .toplists-container .terms_conditions p {
     font-size  : 9px;
