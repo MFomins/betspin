@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const pathname = "/wp-content/themes/betspintheme/dist/img/";
+const pathname = "/wp-content/themes/betspin-theme/dist/img/";
 
 const MyCustomImage = data => {
     return <div className="logo-main">
