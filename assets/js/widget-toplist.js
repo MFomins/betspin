@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const pathname = "/wp-content/themes/betspin-theme/dist/img/";
+const pathname = "/wp-content/themes/betspintheme/dist/img/";
 
 const MyCustomImage = data => {
     return <div className="logo-main">
@@ -44,9 +44,16 @@ const additionalElement = data => {
 };
 
 const MyCustomCTA = data => {
-    return <div className="cta align-center">
-        <a href={data.operatorLink} target="_blank" className="play_button"><img src={pathname + "explore.png"} alt="explore" className="explore"></img>CLAIM BONUS</a>
-    </div>;
+    return <div className="cta-btn">
+        <a href={data.operatorLink} target="_blank" className="play_button">
+            <div className="btn-left">
+                <img src={pathname + "explore.png"} alt="explore" className="explore"></img>
+            </div>
+            <div className="btn-right">
+                <i class="icon-right-open"></i>CLAIM BONUS
+            </div>
+        </a>
+    </div>
 };
 
 const MyCustomReview = data => {

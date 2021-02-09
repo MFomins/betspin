@@ -2677,30 +2677,48 @@ span.popup-title {
 }
 
 /* Hercules CTA button */
-.toplists-container .cta {
-    position: relative;
+.toplists-container .cta-btn {
+    display       : flex;
+    flex-direction: row;
+    align-items   : center;
 }
 
-.toplists-container .cta a {
-    background-color: #3ec148;
-    color           : #fff;
-    font-weight     : 500;
-    text-transform  : uppercase;
-    font-size       : 16px;
-    padding         : 15px 50px;
-    border-radius   : 5px;
+.toplists-container .play_button {
+    display: flex;
 }
 
-.toplists-container .cta a:hover {
-    background-color: #45d451;
+.toplists-container .cta-btn img {
+    max-width: 22px;
 }
 
-.explore {
-    position : absolute;
-    top      : 50%;
-    left:35px;
-    transform: translate(0, -50%);
-    max-width: 24px;
+.toplists-container a:hover .btn-left,
+.toplists-container a:hover .btn-right {
+    background-color: #45d451 !important;
+}
+
+.toplists-container .btn-left,
+.toplists-container .btn-right {
+    min-height : 44px;
+    display    : flex;
+    align-items: center;
+}
+
+.toplists-container .btn-right {
+    font-size  : 16px;
+    color      : #fff;
+    font-weight: 500;
+}
+
+@media (max-width:767px) {
+    .toplists-container .logo-main img {
+        width : 160px;
+        height: 80px;
+    }
+
+    .toplists-container .cta-btn {
+        margin-bottom: 10px;
+        margin-top   : 5px;
+    }
 }
 
 /* Review button */
@@ -2708,7 +2726,7 @@ span.popup-title {
     font-size     : 12px;
     color         : #0087c6;
     letter-spacing: -1px;
-    text-align: center;
+    text-align    : center;
 }
 
 /* Hercules T&C */
@@ -2725,7 +2743,7 @@ span.popup-title {
 
 @media (max-width:767px) {
     .logo-main {
-        padding: 0 0 135px 0;
+        padding: 0 0 110px 0;
     }
 
     .logo-main .id {
