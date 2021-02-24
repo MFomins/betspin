@@ -67,9 +67,11 @@ const MyCustomTerms = data => {
     let terms = data.extraFields.terms_and_conditions;
     let tncChecked = data.extraFields.terms_and_conditions_link_enabled;
     let tnc = data.extraFields.terms_and_condition_link_text;
+
     return <div className="terms_conditions">
         <p>{isChecked === "1" ? terms : ''}<a href={data.tacLink}>{tncChecked === "1" ? tnc : ''}</a></p>
     </div>;
+
 };
 
 

@@ -2526,6 +2526,7 @@ span.popup-title {
 }
 
 .toplists-container .item {
+    display: grid;
     box-shadow           : 0 1px 8px 0 rgb(0 0 0 / 10%);
     border-radius        : 10px;
     grid-row-gap         : 0;
