@@ -259,5 +259,43 @@ function betspin_generate_toc()
     return $toc;
 }
 
-
 add_shortcode('betspin_toc', 'betspin_generate_toc');
+
+function custom_hreflang_map()
+{
+    global $post;
+    if (get_field('hreflang', $post->ID)) {
+        $ids = get_posts(array(
+            'fields'          => 'ids',
+            'posts_per_page'  => -1,
+            'post_type' => 'casino-review'
+        ));
+
+        echo '<link rel="canonical" href="' . get_permalink() . '">' . "\n";
+
+        foreach ($ids as $id) {
+            if (get_field('hreflang', $id)) {
+                echo '<link rel="alternate" href="' . get_permalink($id) . '" hreflang="' . strtolower(get_field('hreflang', $id)) . '">' . "\n";
+            }
+        }
+    }
+}
+
+add_action('wp_head', 'custom_hreflang_map', 1, 1);
+
+/**
+ * Allow changing of the canonical URL.
+ *
+ * @param string $canonical The canonical URL.
+ */
+add_filter('rank_math/frontend/canonical', function ($canonical) {
+    //target a page using its page id
+    global $post;
+    if (get_field('hreflang', $post->ID)) {
+        return false;
+    }
+    return $canonical;
+});
+
+// Remove ACF from menu items
+add_filter('acf/settings/show_admin', '__return_false');
