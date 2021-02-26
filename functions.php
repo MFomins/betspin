@@ -263,21 +263,18 @@ add_shortcode('betspin_toc', 'betspin_generate_toc');
 
 function custom_hreflang_map()
 {
-    global $post;
-    if (get_field('hreflang', $post->ID)) {
-        $ids = get_posts(array(
-            'fields'          => 'ids',
-            'posts_per_page'  => -1,
-            'post_type' => 'casino-review'
-        ));
+    $map = '';
+    $map .= '<link rel="alternate" href="https://www.betspin.com/live-casinos/" hreflang="en" />' . "\n";
+    $map .= '<link rel="alternate" href="https://www.betspin.com/live-casinos/uk/" hreflang="en-GB" />' . "\n";
+    $map .= '<link rel="alternate" href="https://www.betspin.com/live-casinos/canada/" hreflang="en-CA" />' . "\n";
+    $map .= '<link rel="alternate" href="https://www.betspin.com/live-casinos/india/" hreflang="en-IN" />' . "\n";
+    $map .= '<link rel="alternate" href="https://www.betspin.com/live-casinos/malaysia/" hreflang="en-MY" />' . "\n";
+    $map .= '<link rel="alternate" href="https://www.betspin.com/live-casinos/indonesia/" hreflang="en-ID" />' . "\n";
+    $map .= '<link rel="alternate" href="https://www.betspin.com/live-casinos/south-africa/" hreflang="en-ZA" />' . "\n";
+    $map .= '<link rel="alternate" href="https://www.betspin.com/live-casinos/" hreflang="x-default" />' . "\n";
 
-        echo '<link rel="canonical" href="' . get_permalink() . '">' . "\n";
-
-        foreach ($ids as $id) {
-            if (get_field('hreflang', $id)) {
-                echo '<link rel="alternate" href="' . get_permalink($id) . '" hreflang="' . strtolower(get_field('hreflang', $id)) . '">' . "\n";
-            }
-        }
+    if (is_post_type_archive('casino-review') || is_single([429, 428, 427, 426, 425, 421])) {
+        echo $map;
     }
 }
 
@@ -290,12 +287,11 @@ add_action('wp_head', 'custom_hreflang_map', 1, 1);
  */
 add_filter('rank_math/frontend/canonical', function ($canonical) {
     //target a page using its page id
-    global $post;
-    if (get_field('hreflang', $post->ID)) {
+    if (is_post_type_archive('casino-review') || is_single([429, 428, 427, 426, 425, 421])) {
         return false;
     }
     return $canonical;
 });
 
 // Remove ACF from menu items
-add_filter('acf/settings/show_admin', '__return_false');
+// add_filter('acf/settings/show_admin', '__return_false');
