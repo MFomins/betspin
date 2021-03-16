@@ -144,7 +144,9 @@ function betspin_nav_menu_objects($items, $args)
         $icon = get_field('betspin_menu_icon', $item);
         // append icon
         if ($icon) {
-            $item->title = "<img src='{$icon["url"]}' alt='{$icon["alt"]}' class='menu-icon'>" . "<span>" . $item->title . "</span>";
+            $item->title = "<img src='{$icon["url"]}' alt='{$icon["alt"]}' class='menu-icon'>" . "<span itemprop='name'>" . $item->title . "</span>";
+        } else {
+            $item->title = "<span itemprop='name'>" . $item->title . "</span>";
         }
     }
     // return
@@ -295,3 +297,12 @@ add_filter('rank_math/frontend/canonical', function ($canonical) {
 
 // Remove ACF from menu items
 // add_filter('acf/settings/show_admin', '__return_false');
+
+
+//Add site navigation element to site menu
+function wpse183311_filter($atts, $item, $args)
+{
+    $atts['itemprop'] = 'url';
+    return $atts;
+}
+add_filter('nav_menu_link_attributes', 'wpse183311_filter', 3, 10);
