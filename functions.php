@@ -96,7 +96,7 @@ function betspin_unregister_widgets()
 function betspin_scripts()
 {
     //Main stylesheet
-    wp_enqueue_style('betspin-main', get_stylesheet_uri(), array(), '1.0.34');
+    wp_enqueue_style('betspin-main', get_stylesheet_uri(), array(), '1.0.53');
 
     //Google font
     wp_enqueue_style('font', 'https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
@@ -105,9 +105,8 @@ function betspin_scripts()
     // wp_enqueue_style('betspin-main', BETSPIN_DIR_URI . '/dist/css/style.min.css', array(), '1.0.5');
 
     /** Load main JavaScript files */
-    wp_enqueue_script('betspin-scripts', BETSPIN_DIR_URI . '/dist/js/scripts.js', array('jquery'), '1.0.8', true);
-
-    wp_enqueue_script('betspin-toc', BETSPIN_DIR_URI . '/dist/js/jquery.toc.js', array('jquery'), '1.0.0');
+    wp_enqueue_script('betspin-scripts', BETSPIN_DIR_URI . '/dist/js/scripts.js', array('jquery'), '1.0.0', true);
+    wp_enqueue_script('toplist', BETSPIN_DIR_URI . '/assets/dist/front.js', array(), '1.0.19', true);
 }
 
 //Create the menus
@@ -145,7 +144,9 @@ function betspin_nav_menu_objects($items, $args)
         $icon = get_field('betspin_menu_icon', $item);
         // append icon
         if ($icon) {
-            $item->title = "<img src='{$icon["url"]}' alt='{$icon["alt"]}' class='menu-icon'>" . "<span>" . $item->title . "</span>";
+            $item->title = "<img src='{$icon["url"]}' alt='{$icon["alt"]}' class='menu-icon'>" . "<span itemprop='name'>" . $item->title . "</span>";
+        } else {
+            $item->title = "<span itemprop='name'>" . $item->title . "</span>";
         }
     }
     // return
@@ -260,5 +261,48 @@ function betspin_generate_toc()
     return $toc;
 }
 
-
 add_shortcode('betspin_toc', 'betspin_generate_toc');
+
+function custom_hreflang_map()
+{
+    $map = '';
+    $map .= '<link rel="alternate" href="https://www.betspin.com/live-casinos/" hreflang="en" />' . "\n";
+    $map .= '<link rel="alternate" href="https://www.betspin.com/live-casinos/uk/" hreflang="en-GB" />' . "\n";
+    $map .= '<link rel="alternate" href="https://www.betspin.com/live-casinos/canada/" hreflang="en-CA" />' . "\n";
+    $map .= '<link rel="alternate" href="https://www.betspin.com/live-casinos/india/" hreflang="en-IN" />' . "\n";
+    $map .= '<link rel="alternate" href="https://www.betspin.com/live-casinos/malaysia/" hreflang="en-MY" />' . "\n";
+    $map .= '<link rel="alternate" href="https://www.betspin.com/live-casinos/indonesia/" hreflang="en-ID" />' . "\n";
+    $map .= '<link rel="alternate" href="https://www.betspin.com/live-casinos/south-africa/" hreflang="en-ZA" />' . "\n";
+    $map .= '<link rel="alternate" href="https://www.betspin.com/live-casinos/" hreflang="x-default" />' . "\n";
+
+    if (is_post_type_archive('casino-review') || is_single([429, 428, 427, 426, 425, 421])) {
+        echo $map;
+    }
+}
+
+add_action('wp_head', 'custom_hreflang_map', 1, 1);
+
+/**
+ * Allow changing of the canonical URL.
+ *
+ * @param string $canonical The canonical URL.
+ */
+add_filter('rank_math/frontend/canonical', function ($canonical) {
+    //target a page using its page id
+    if (is_post_type_archive('casino-review') || is_single([429, 428, 427, 426, 425, 421])) {
+        return false;
+    }
+    return $canonical;
+});
+
+// Remove ACF from menu items
+// add_filter('acf/settings/show_admin', '__return_false');
+
+
+//Add site navigation element to site menu
+function wpse183311_filter($atts, $item, $args)
+{
+    $atts['itemprop'] = 'url';
+    return $atts;
+}
+add_filter('nav_menu_link_attributes', 'wpse183311_filter', 3, 10);

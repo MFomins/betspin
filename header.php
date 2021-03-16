@@ -48,18 +48,18 @@
             <div class="logo">
                 <a href="<?php echo home_url(); ?>"><?php the_custom_logo(); ?></a>
             </div>
-            <div class="navigation">
-                <?php if (has_nav_menu('main-menu')) : ?>
-                    <?php
-                    $args = array(
-                        'theme_location' => 'main-menu',
-                        'container' => 'nav',
-                        'container_class' => 'main-menu',
-                    );
-                    wp_nav_menu($args);
-                    ?>
-                <?php endif; ?>
-            </div>
+
+            <nav role="navigation" class="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+                    <?php if (has_nav_menu('main-menu')) : ?>
+                        <?php
+                        $args = array(
+                            'theme_location' => 'main-menu',
+                            'container_class' => 'main-menu',
+                        );
+                        wp_nav_menu($args);
+                        ?>
+                    <?php endif; ?>
+            </nav>
 
             <?php get_search_form(true); ?>
 

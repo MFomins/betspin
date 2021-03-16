@@ -3,8 +3,8 @@ Theme Name: Betspin Theme
 Theme URI: https://yoursite.lv/
 Author: KR
 Author URI: https://yoursite.lv/
-Description: Custom casino theme
-Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
+Description: Custom casino theme for Betspin with Hercules toplists
+Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu
 Version: 1.0.0
 Requires at least: 5.0
 Tested up to: 5.4
@@ -2517,5 +2517,288 @@ span.popup-title {
 @media (max-width:767px) {
     #toc {
         width: 100%;
+    }
+}
+
+/* Styles for Hercules toplist */
+.toplists-container ul {
+    padding: 0;
+}
+
+.toplists-container .item {
+    display: grid;
+    box-shadow           : 0 1px 8px 0 rgb(0 0 0 / 10%);
+    border-radius        : 10px;
+    grid-row-gap         : 0;
+    padding              : 10px;
+    grid-template-columns: 1.1fr 1.3fr 1fr 1fr 1.4fr .4fr;
+    grid-column-gap      : 0;
+}
+
+
+.toplists-container .item>* {
+    height         : 100%;
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items    : center;
+    margin         : 0;
+}
+
+.toplists-container ul li::before {
+    display: none;
+}
+
+/* Hercules widget logo column */
+.logo-main {
+    position: relative;
+}
+
+.item {
+    counter-increment: custom-counter;
+}
+
+.logo-main .id {
+    position       : absolute;
+    left           : 0;
+    background     : #dd9933;
+    color          : #fff;
+    padding        : 10px;
+    border-radius  : 100px;
+    font-size      : 14px;
+    width          : 28px;
+    height         : 28px;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+}
+
+.logo-main .id::before {
+    content: "#"counter(custom-counter);
+}
+
+.toplists-container .logo-main img {
+    width     : 130px;
+    height    : 55px;
+    object-fit: contain;
+}
+
+/* Hercules main bonus column */
+.toplists-container .casino-name {
+    background    : #e8e8e8;
+    line-height   : 20px;
+    padding       : 0 5px;
+    border-radius : 5px;
+    font-size     : 12px;
+    letter-spacing: -1px;
+    margin-top    : 10px;
+}
+
+/* Main bonus*/
+.main-bonus {
+    justify-self: flex-start;
+    width       : 100%;
+}
+
+.bonus-line {
+    line-height   : 20px;
+    text-align    : center;
+    font-size     : 16px;
+    letter-spacing: -1px;
+}
+
+.bonus-label {
+    background    : #dd9933;
+    color         : #fff;
+    font-size     : 12px;
+    font-weight   : 500;
+    padding       : 0 5px;
+    border-radius : 5px;
+    line-height   : 20px;
+    margin-top    : 5px;
+    text-transform: uppercase;
+}
+
+/* Selling points */
+.item .selling_points {
+    padding-left: 45px;
+}
+
+.item .selling_points li::before {
+    display         : block !important;
+    background-image: url(dist/img/tick.png);
+    content         : '';
+    width           : 18px;
+    height          : 18px;
+}
+
+.selling_points li {
+    margin        : 0 !important;
+    font-size     : 14px;
+    letter-spacing: -1px;
+    width         : 100%;
+    align-self    : flex-start;
+}
+
+.selling_points li:not(:last-child) {
+    margin-bottom: 8px !important;
+}
+
+/* Total games */
+.total-slot-games {
+    color         : #333;
+    font-size     : 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height   : 17px;
+    font-weight   : 500;
+    border-bottom : 1px solid #d0d0d0;
+}
+
+.total-slot-games span {
+    color      : #333;
+    font-size  : 16px;
+    font-weight: 500;
+    display    : block;
+    text-align : center;
+}
+
+.total-live-games {
+    color         : #333;
+    font-size     : 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height   : 17px;
+    font-weight   : 500;
+}
+
+.total-live-games span {
+    color      : #f43d45;
+    font-weight: 700;
+}
+
+/* Hercules CTA button */
+.toplists-container .cta-btn {
+    display       : flex;
+    flex-direction: row;
+    align-items   : center;
+}
+
+.toplists-container .play_button {
+    display: flex;
+}
+
+.toplists-container .cta-btn img {
+    max-width: 22px;
+}
+
+.toplists-container a:hover .btn-left,
+.toplists-container a:hover .btn-right {
+    background-color: #45d451 !important;
+}
+
+.toplists-container .btn-left,
+.toplists-container .btn-right {
+    min-height : 44px;
+    display    : flex;
+    align-items: center;
+}
+
+.toplists-container .btn-right {
+    font-size  : 16px;
+    color      : #fff;
+    font-weight: 500;
+}
+
+@media (max-width:767px) {
+    .toplists-container .logo-main img {
+        width : 160px;
+        height: 80px;
+    }
+
+    .toplists-container .cta-btn {
+        margin-bottom: 10px;
+        margin-top   : 5px;
+    }
+}
+
+/* Review button */
+.review_button {
+    font-size     : 12px;
+    color         : #0087c6;
+    letter-spacing: -1px;
+    text-align    : center;
+}
+
+/* Hercules T&C */
+.toplists-container .terms_conditions {
+    margin-top: 5px;
+    justify-self: flex-start;
+}
+
+.toplists-container .terms_conditions a{
+    margin-left: 3px;
+}
+
+
+
+.toplists-container .terms_conditions p {
+    font-size  : 9px;
+    margin     : 0;
+    line-height: 15px;
+    color      : #716f6f;
+}
+
+@media (max-width:767px) {
+    .logo-main {
+        padding: 0 0 110px 0;
+    }
+
+    .logo-main .id {
+        width    : 48px;
+        height   : 48px;
+        font-size: 20px;
+    }
+
+    .toplists-container .item {
+        display       : flex;
+        flex-direction: column;
+        position      : relative;
+    }
+
+    .selling_points {
+        display: none !important;
+    }
+
+    .main-bonus,
+    .total-games {
+        width     : 45%;
+        position  : absolute;
+        height    : initial !important;
+        min-height: 85px;
+        padding   : 10px;
+    }
+
+    .main-bonus {
+        left: 10px;
+        top : 130px;
+    }
+
+    .total-games {
+        right: 10px;
+        top  : 130px;
+    }
+
+    .main-bonus,
+    .total-games {
+        background-color: #dbebf8;
+    }
+
+    .item .cta {
+        margin-bottom: 10px;
+    }
+
+    .item .terms_conditions {
+        margin-top: 10px;
     }
 }
