@@ -57,190 +57,6 @@ function my_acf_init_block_types()
 if (function_exists('acf_add_local_field_group')) :
 
     acf_add_local_field_group(array(
-        'key' => 'group_5f8fe9d823947',
-        'title' => 'Games Block Columns',
-        'fields' => array(
-            array(
-                'key' => 'field_5f8fe9dfb300b',
-                'label' => 'Columns',
-                'name' => 'betspin_games_columns',
-                'type' => 'select',
-                'instructions' => '',
-                'required' => 0,
-                'conditional_logic' => 0,
-                'wrapper' => array(
-                    'width' => '',
-                    'class' => '',
-                    'id' => '',
-                ),
-                'choices' => array(
-                    4 => '4',
-                    5 => '5',
-                ),
-                'default_value' => false,
-                'allow_null' => 0,
-                'multiple' => 0,
-                'ui' => 0,
-                'return_format' => 'value',
-                'ajax' => 0,
-                'placeholder' => '',
-            ),
-        ),
-        'location' => array(
-            array(
-                array(
-                    'param' => 'block',
-                    'operator' => '==',
-                    'value' => 'acf/games-block',
-                ),
-            ),
-        ),
-        'menu_order' => 0,
-        'position' => 'normal',
-        'style' => 'default',
-        'label_placement' => 'top',
-        'instruction_placement' => 'label',
-        'hide_on_screen' => '',
-        'active' => true,
-        'description' => '',
-        'modified' => false,
-    ));
-
-    acf_add_local_field_group(array(
-        'key' => 'group_6059b77c25988',
-        'title' => 'Theme Author Info',
-        'fields' => array(
-            array(
-                'key' => 'field_6059b7fa2f5b5',
-                'label' => 'Name',
-                'name' => 'betspin_author_name',
-                'type' => 'text',
-                'instructions' => '',
-                'required' => 0,
-                'conditional_logic' => 0,
-                'wrapper' => array(
-                    'width' => '',
-                    'class' => '',
-                    'id' => '',
-                ),
-                'default_value' => '',
-                'placeholder' => '',
-                'prepend' => '',
-                'append' => '',
-                'maxlength' => '',
-            ),
-            array(
-                'key' => 'field_6059b8012f5b6',
-                'label' => 'Information',
-                'name' => 'betspin_author_information',
-                'type' => 'textarea',
-                'instructions' => '',
-                'required' => 0,
-                'conditional_logic' => 0,
-                'wrapper' => array(
-                    'width' => '',
-                    'class' => '',
-                    'id' => '',
-                ),
-                'default_value' => '',
-                'placeholder' => '',
-                'maxlength' => '',
-                'rows' => '',
-                'new_lines' => '',
-            ),
-            array(
-                'key' => 'field_6059b8162f5b7',
-                'label' => 'Image',
-                'name' => 'betspin_author_image',
-                'type' => 'image',
-                'instructions' => '',
-                'required' => 0,
-                'conditional_logic' => 0,
-                'wrapper' => array(
-                    'width' => '',
-                    'class' => '',
-                    'id' => '',
-                ),
-                'return_format' => 'array',
-                'preview_size' => 'medium',
-                'library' => 'all',
-                'min_width' => '',
-                'min_height' => '',
-                'min_size' => '',
-                'max_width' => '',
-                'max_height' => '',
-                'max_size' => '',
-                'mime_types' => '',
-            ),
-            array(
-                'key' => 'field_6059b81c2f5b8',
-                'label' => 'Twitter',
-                'name' => 'betspin_author_twitter',
-                'type' => 'url',
-                'instructions' => '',
-                'required' => 0,
-                'conditional_logic' => 0,
-                'wrapper' => array(
-                    'width' => '',
-                    'class' => '',
-                    'id' => '',
-                ),
-                'default_value' => '',
-                'placeholder' => '',
-            ),
-            array(
-                'key' => 'field_6059b8222f5b9',
-                'label' => 'Linkedin',
-                'name' => 'betspin_author_linkedin',
-                'type' => 'url',
-                'instructions' => '',
-                'required' => 0,
-                'conditional_logic' => 0,
-                'wrapper' => array(
-                    'width' => '',
-                    'class' => '',
-                    'id' => '',
-                ),
-                'default_value' => '',
-                'placeholder' => '',
-            ),
-            array(
-                'key' => 'field_6059b82b2f5ba',
-                'label' => 'Instagram',
-                'name' => 'betspin_author_instagram',
-                'type' => 'url',
-                'instructions' => '',
-                'required' => 0,
-                'conditional_logic' => 0,
-                'wrapper' => array(
-                    'width' => '',
-                    'class' => '',
-                    'id' => '',
-                ),
-                'default_value' => '',
-                'placeholder' => '',
-            ),
-        ),
-        'location' => array(
-            array(
-                array(
-                    'param' => 'user_role',
-                    'operator' => '==',
-                    'value' => 'all',
-                ),
-            ),
-        ),
-        'menu_order' => 0,
-        'position' => 'normal',
-        'style' => 'default',
-        'label_placement' => 'top',
-        'instruction_placement' => 'label',
-        'hide_on_screen' => '',
-        'active' => true,
-        'description' => '',
-    ));
-
-    acf_add_local_field_group(array(
         'key' => 'group_5efeeea29ab6b',
         'title' => 'Theme Footer',
         'fields' => array(
@@ -356,6 +172,7 @@ if (function_exists('acf_add_local_field_group')) :
                     ),
                 ),
             ),
+
             array(
                 'key' => 'field_5f899a961e15a',
                 'label' => 'Copyright / DMCA',
@@ -410,6 +227,7 @@ if (function_exists('acf_add_local_field_group')) :
                 'append' => '',
                 'maxlength' => '',
             ),
+
         ),
         'location' => array(
             array(
@@ -428,7 +246,6 @@ if (function_exists('acf_add_local_field_group')) :
         'hide_on_screen' => '',
         'active' => true,
         'description' => '',
-        'modified' => false,
     ));
 
     acf_add_local_field_group(array(
@@ -536,8 +353,57 @@ if (function_exists('acf_add_local_field_group')) :
         'hide_on_screen' => '',
         'active' => true,
         'description' => '',
-        'modified' => false,
     ));
+
+    acf_add_local_field_group(array(
+        'key' => 'group_5f8fe9d823947',
+        'title' => 'Games Block Columns',
+        'fields' => array(
+            array(
+                'key' => 'field_5f8fe9dfb300b',
+                'label' => 'Columns',
+                'name' => 'betspin_games_columns',
+                'type' => 'select',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'choices' => array(
+                    4 => '4',
+                    5 => '5',
+                ),
+                'default_value' => false,
+                'allow_null' => 0,
+                'multiple' => 0,
+                'ui' => 0,
+                'return_format' => 'value',
+                'ajax' => 0,
+                'placeholder' => '',
+            ),
+        ),
+        'location' => array(
+            array(
+                array(
+                    'param' => 'block',
+                    'operator' => '==',
+                    'value' => 'acf/games-block',
+                ),
+            ),
+        ),
+        'menu_order' => 0,
+        'position' => 'normal',
+        'style' => 'default',
+        'label_placement' => 'top',
+        'instruction_placement' => 'label',
+        'hide_on_screen' => '',
+        'active' => true,
+        'description' => '',
+    ));
+
 
     acf_add_local_field_group(array(
         'key' => 'group_5f6dbc4c15449',
@@ -586,6 +452,7 @@ if (function_exists('acf_add_local_field_group')) :
                         'max_size' => '',
                         'mime_types' => '',
                     ),
+
                     array(
                         'key' => 'field_5f77087e95226',
                         'label' => 'Header',
@@ -640,7 +507,6 @@ if (function_exists('acf_add_local_field_group')) :
         'hide_on_screen' => '',
         'active' => true,
         'description' => '',
-        'modified' => false,
     ));
 
     acf_add_local_field_group(array(
@@ -708,7 +574,6 @@ if (function_exists('acf_add_local_field_group')) :
         'hide_on_screen' => '',
         'active' => true,
         'description' => '',
-        'modified' => false,
     ));
 
     acf_add_local_field_group(array(
@@ -757,7 +622,6 @@ if (function_exists('acf_add_local_field_group')) :
         'hide_on_screen' => '',
         'active' => true,
         'description' => '',
-        'modified' => false,
     ));
 
 endif;

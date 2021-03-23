@@ -39,10 +39,5 @@
             <?php echo betspin_socials(); ?>
         </div>
     <?php endif; ?>
-    <div class="author">
-        <?php if (!is_front_page()) : ?>
-            <?php get_template_part('parts/author-box'); ?>
-        <?php endif; ?>
-    </div>
 </main>
 <?php get_footer(); ?>
