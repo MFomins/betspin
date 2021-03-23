@@ -623,5 +623,63 @@ if (function_exists('acf_add_local_field_group')) :
         'active' => true,
         'description' => '',
     ));
+    acf_add_local_field_group(array(
+        'key' => 'group_604b248ca5f3e',
+        'title' => 'Payment Methods',
+        'fields' => array(
+            array(
+                'key' => 'field_604b44c3294c8',
+                'label' => 'Payments Description',
+                'name' => 'payment_desc',
+                'type' => 'textarea',
+                'instructions' => 'Payment methods - [payments-list], Casinos list with specific payments - [casino_list payments="name"]',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'placeholder' => '',
+                'maxlength' => '',
+                'rows' => '',
+                'new_lines' => '',
+            ),
+            array(
+                'key' => 'field_604b2dae294c7',
+                'label' => 'Payments redirect',
+                'name' => 'payments_redirect',
+                'type' => 'url',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'placeholder' => '',
+            ),
+        ),
+        'location' => array(
+            array(
+                array(
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'payment_methods',
+                ),
+            ),
+        ),
+        'menu_order' => 0,
+        'position' => 'normal',
+        'style' => 'default',
+        'label_placement' => 'top',
+        'instruction_placement' => 'label',
+        'hide_on_screen' => '',
+        'active' => true,
+        'description' => '',
+    ));
 
 endif;
