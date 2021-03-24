@@ -1,7 +1,6 @@
 <footer class="site-footer">
     <div class="footer-wrap container">
         <div class="footer-menus">
-            <!-- Footer 1 -->
             <?php if (has_nav_menu('footer-1')) : ?>
                 <div class="footer-col">
 
@@ -16,9 +15,6 @@
                     ?>
                 </div>
             <?php endif; ?>
-            <!-- Footer 1 -->
-
-            <!-- Footer 2 -->
             <?php if (has_nav_menu('footer-2')) : ?>
                 <div class="footer-col">
                     <span><?php $menu = wp_get_nav_menu_name("footer-2");
@@ -32,9 +28,6 @@
                     ?>
                 </div>
             <?php endif; ?>
-            <!-- Footer 2 -->
-
-            <!-- Footer 3 -->
             <?php if (has_nav_menu('footer-3')) : ?>
                 <div class="footer-col">
                     <span><?php $menu = wp_get_nav_menu_name("footer-3");
@@ -48,9 +41,6 @@
                     ?>
                 </div>
             <?php endif; ?>
-            <!-- Footer 3 -->
-
-            <!-- Footer 4 -->
             <?php if (has_nav_menu('footer-4')) : ?>
                 <div class="footer-col">
                     <span><?php $menu = wp_get_nav_menu_name("footer-4");
@@ -64,7 +54,6 @@
                     ?>
                 </div>
             <?php endif; ?>
-            <!-- Footer 4 -->
         </div>
         <div class="responsible-gaming">
             <?php
