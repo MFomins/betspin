@@ -51,6 +51,7 @@ require_once BETSPIN_TEMPLATE_DIR . '/inc/shortcodes/block-shortcode.php';
 
 require_once BETSPIN_TEMPLATE_DIR . '/inc/shortcodes/deposit-shortcode.php';
 
+require_once BETSPIN_TEMPLATE_DIR . '/inc/shortcodes/payments-list-shortcode.php';
 
 /*=============================================
 =            FUNCTIONS			            =
@@ -281,6 +282,28 @@ function custom_hreflang_map()
 }
 
 add_action('wp_head', 'custom_hreflang_map', 1, 1);
+
+// add payment methods CPT
+function payment_methods ()
+{
+
+    $args = array (
+        'labels' => array(
+                'name' => 'Payment methods',
+                'singular_name' => 'payment_method',
+        ),
+        'public' => true,
+        'has_archive' => true,
+        'menu_icon' => 'dashicons-money',
+        'supports' => array('title', 'editor', 'thumbnail'),
+        'rewrite' => array('slug' => 'Payment_methods'),
+    );
+
+    register_post_type( 'payment_methods', $args);
+
+}
+add_action('init','payment_methods');
+
 
 /**
  * Allow changing of the canonical URL.
