@@ -1,3 +1,4 @@
+
 <div class="payments-list">
 
     <div class="payments-list__logo">        

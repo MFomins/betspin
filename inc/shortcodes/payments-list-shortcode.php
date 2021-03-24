@@ -37,6 +37,7 @@ function payment_methods_list($atts)
 ?>
 
     <div class="payment-methods-list">
+
         <?php
         while ($loop->have_posts()) :
 
