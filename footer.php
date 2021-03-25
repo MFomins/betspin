@@ -4,7 +4,7 @@
             <?php if (has_nav_menu('footer-1')) : ?>
                 <div class="footer-col">
 
-                    <span><?php $menu = wp_get_nav_menu_name("footer-1");
+                    <span class="footer-menu-title"><?php $menu = wp_get_nav_menu_name("footer-1");
                             echo $menu; ?></span>
                     <?php
                     $args = array(
@@ -17,7 +17,7 @@
             <?php endif; ?>
             <?php if (has_nav_menu('footer-2')) : ?>
                 <div class="footer-col">
-                    <span><?php $menu = wp_get_nav_menu_name("footer-2");
+                    <span class="footer-menu-title"><?php $menu = wp_get_nav_menu_name("footer-2");
                             echo $menu; ?></span>
                     <?php
                     $args = array(
@@ -30,7 +30,7 @@
             <?php endif; ?>
             <?php if (has_nav_menu('footer-3')) : ?>
                 <div class="footer-col">
-                    <span><?php $menu = wp_get_nav_menu_name("footer-3");
+                    <span class="footer-menu-title"><?php $menu = wp_get_nav_menu_name("footer-3");
                             echo $menu; ?></span>
                     <?php
                     $args = array(
@@ -43,7 +43,7 @@
             <?php endif; ?>
             <?php if (has_nav_menu('footer-4')) : ?>
                 <div class="footer-col">
-                    <span><?php $menu = wp_get_nav_menu_name("footer-4");
+                    <span class="footer-menu-title"><?php $menu = wp_get_nav_menu_name("footer-4");
                             echo $menu; ?></span>
                     <?php
                     $args = array(
