@@ -205,6 +205,17 @@ add_filter('wp_nav_menu_objects', 'betspin_nav_menu_objects', 10, 2);
 // Allow HTML in author bio section 
 remove_filter('pre_user_description', 'wp_filter_kses');
 
+$payment_desc = get_field('payment_desc');
+function the_field_without_wpautop( $payment_desc ) {
+	
+	remove_filter('acf_the_content', 'wpautop');
+	
+	the_field( $payment_desc );
+	
+	add_filter('acf_the_content', 'wpautop');
+	
+}
+
 /*=============================================
 =            ACTIONS			            =
 =============================================*/
