@@ -2907,9 +2907,9 @@ a.author-single-post {
     flex-wrap    : wrap;
     align-items  : center;
     max-width    : 255px;
+    height       : 350px    ;
     margin-bottom: 15px !important;
     position     : relative;
-    height       : 300px !important;
     border-radius: 15px;
 
     display           : grid;
@@ -2947,8 +2947,8 @@ a.author-single-post {
     text-align : center;
 }
 
-.payments-list__desc {
-    text-align: center;
+.payments-list__desc ul{
+    padding: 0 0 0 3rem;
 }
 
 .payments-list__button {
