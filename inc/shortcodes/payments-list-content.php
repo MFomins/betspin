@@ -12,7 +12,10 @@
     </div>
 
     <div class="payments-list__desc">
-        <p><?php echo get_field('payment_desc'); ?></p>               
+        <?php echo $payment_desc = get_field('payment_desc', false, false); 
+            $stripped_desc = str_replace(array('<p>','</p>'),'',$payment_desc);
+
+        ?>              
     </div>
 
     <div class="payments-list__button">
