@@ -2980,3 +2980,67 @@ a.author-single-post {
 .payments-list:hover .payments-list__logo {
     background-color: #a01920;
 }
+
+
+
+/* Games buttons */
+.games-buttons-list {
+    margin         : 25px 0;
+    display        : flex;
+    flex-wrap      : wrap;
+    justify-content: space-evenly;
+    counter-reset  : section;
+}
+
+.games-list {
+    box-shadow   : 0 0 8px 0 rgba(0, 0, 0, 0.226);
+    background-color: #ce2029;
+    max-width    : 255px;
+    margin-bottom: 40px !important;
+    position     : relative;
+    border-radius: 15px;
+
+    display           : block;
+    width             : 100%;
+    transform         : scale(1.00);
+}
+
+.games-list__wrap {
+    padding: 5rem 6.5rem 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.games-list__logo {
+    display    : inline-block;
+    text-align : center;
+}
+.games-list__logo img {
+    height    : 9rem;
+    object-fit: contain;
+}
+
+.games-list__title {
+    font-size  : 20px;
+    font-weight: 900;
+    color      : white;
+    display    : block;
+    text-align : center;
+}
+
+.payments-list__button {
+    background-color          : #ce2029;
+    display                   : inline-block;
+    align-items               : center;
+    width                     : 100%;
+    height                    : 100%;
+}
+
+.games-list:hover{
+    background-color: #a01920;
+}
+.games-list:hover .games-list__logo{
+    background-color: #a01920;
+}
+

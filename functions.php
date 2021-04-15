@@ -53,6 +53,8 @@ require_once BETSPIN_TEMPLATE_DIR . '/inc/shortcodes/deposit-shortcode.php';
 
 require_once BETSPIN_TEMPLATE_DIR . '/inc/shortcodes/payments-list-shortcode.php';
 
+require_once BETSPIN_TEMPLATE_DIR . '/inc/shortcodes/games-list-shortcode.php';
+
 /*=============================================
 =            FUNCTIONS			            =
 =============================================*/
@@ -97,7 +99,7 @@ function betspin_unregister_widgets()
 function betspin_scripts()
 {
     //Main stylesheet
-    wp_enqueue_style('betspin-main', get_stylesheet_uri(), array(), '1.0.57');
+    wp_enqueue_style('betspin-main', get_stylesheet_uri(), array(), '1.0.58');
 
     //Google font
     wp_enqueue_style('font', 'https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
@@ -314,6 +316,28 @@ function payment_methods ()
 
 }
 add_action('init','payment_methods');
+
+// add payment methods CPT
+function livegames ()
+{
+
+    $args = array (
+        'labels' => array(
+                'name' => 'games',
+                'singular_name' => 'game',
+        ),
+        'public' => true,
+        'has_archive' => true,
+        'menu_icon' => 'dashicons-games',
+        'supports' => array('title', 'editor', 'thumbnail'),
+        'rewrite' => array('slug' => 'games'),
+    );
+
+    register_post_type( 'games', $args);
+
+}
+add_action('init','livegames');
+
 
 
 /**
