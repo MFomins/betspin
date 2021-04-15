@@ -318,25 +318,25 @@ function payment_methods ()
 add_action('init','payment_methods');
 
 // add payment methods CPT
-function livegames ()
+function games_buttons ()
 {
 
     $args = array (
         'labels' => array(
-                'name' => 'games-buttons',
-                'singular_name' => 'game-buttons',
+                'name' => 'Games buttons',
+                'singular_name' => 'game_buttons',
         ),
         'public' => true,
         'has_archive' => true,
         'menu_icon' => 'dashicons-games',
         'supports' => array('title', 'editor', 'thumbnail'),
-        'rewrite' => array('slug' => 'games-buttons'),
+        'rewrite' => array('slug' => 'games_buttons'),
     );
 
-    register_post_type( 'games-buttons', $args);
+    register_post_type( 'games_buttons', $args);
 
 }
-add_action('init','livegames');
+add_action('init','games_buttons');
 
 
 

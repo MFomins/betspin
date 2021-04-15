@@ -818,4 +818,46 @@ if (function_exists('acf_add_local_field_group')) :
         'description' => '',
     ));
 
+    acf_add_local_field_group(array(
+        'key' => 'group_60755d342f55c',
+        'title' => 'Games buttons',
+        'fields' => array(
+            array(
+                'key' => 'field_60755d77fc892',
+                'label' => 'games redirect',
+                'name' => 'games_redirect',
+                'type' => 'url',
+                'instructions' => '[games-list id=2144....] for buttons //
+    
+    [casino_top3 games=blackjack.....] for casino list //
+    [casino_box games=blackjack....] for casino boxes //',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'placeholder' => '',
+            ),
+        ),
+        'location' => array(
+            array(
+                array(
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'games_buttons',
+                ),
+            ),
+        ),
+        'menu_order' => 0,
+        'position' => 'normal',
+        'style' => 'default',
+        'label_placement' => 'top',
+        'instruction_placement' => 'label',
+        'hide_on_screen' => '',
+        'active' => true,
+        'description' => '',
+    ));
 endif;
