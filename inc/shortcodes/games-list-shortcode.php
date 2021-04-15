@@ -10,7 +10,7 @@ function games_list($atts)
             'id'  => '',
             'updated' => '',
             'categories' => '',
-            'type' => 'games',
+            'type' => 'games-buttons',
             'style' => ''
         ),
         $atts,
@@ -22,7 +22,7 @@ function games_list($atts)
 
 
     $loop_args = array(
-        'post_type' => 'games',
+        'post_type' => 'games-buttons',
         'posts_per_page' => $atts['limit'],
         'orderby' => 'post__in',
     );

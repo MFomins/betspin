@@ -323,17 +323,17 @@ function livegames ()
 
     $args = array (
         'labels' => array(
-                'name' => 'games',
-                'singular_name' => 'game',
+                'name' => 'games-buttons',
+                'singular_name' => 'game-buttons',
         ),
         'public' => true,
         'has_archive' => true,
         'menu_icon' => 'dashicons-games',
         'supports' => array('title', 'editor', 'thumbnail'),
-        'rewrite' => array('slug' => 'games'),
+        'rewrite' => array('slug' => 'games-buttons'),
     );
 
-    register_post_type( 'games', $args);
+    register_post_type( 'games-buttons', $args);
 
 }
 add_action('init','livegames');
