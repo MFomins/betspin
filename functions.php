@@ -305,11 +305,10 @@ function payment_methods ()
                 'name' => 'Payment methods',
                 'singular_name' => 'payment_method',
         ),
-        'public' => true,
-        'has_archive' => true,
+        'has_archive' => false,
         'menu_icon' => 'dashicons-money',
         'supports' => array('title', 'editor', 'thumbnail'),
-        'rewrite' => array('slug' => 'Payment_methods'),
+        'rewrite' => array('slug' => 'payment_methods'),
     );
 
     register_post_type( 'payment_methods', $args);
@@ -326,8 +325,7 @@ function games_buttons ()
                 'name' => 'Games buttons',
                 'singular_name' => 'game_buttons',
         ),
-        'public' => true,
-        'has_archive' => true,
+        'has_archive' => false,
         'menu_icon' => 'dashicons-games',
         'supports' => array('title', 'editor', 'thumbnail'),
         'rewrite' => array('slug' => 'games_buttons'),
