@@ -308,7 +308,7 @@ function payment_methods ()
         'has_archive' => false,
         'menu_icon' => 'dashicons-money',
         'supports' => array('title', 'editor', 'thumbnail'),
-        'rewrite' => array('slug' => 'payment_methods'),
+        'rewrite' => array('slug' => 'ayment_methods'),
     );
 
     register_post_type( 'payment_methods', $args);
@@ -335,8 +335,6 @@ function games_buttons ()
 
 }
 add_action('init','games_buttons');
-
-
 
 /**
  * Allow changing of the canonical URL.
