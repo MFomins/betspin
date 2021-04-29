@@ -72,7 +72,7 @@
             <div class="mobile-nav container">
                 <div class="mobile-left">
                     <div class="logo">
-                        <a href="<?php echo home_url(); ?>"><?php the_custom_logo(); ?></a>
+                        <a href="<?php echo home_url(); ?>" aria-label="Betspin-logo"><?php the_custom_logo(); ?></a>
                     </div>
                 </div>
                 <div class="mobile-right">

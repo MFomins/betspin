@@ -7,7 +7,7 @@
                 <div class="text-secondary">Get closer to the action with live casino games</div>
                 <div class="homepage-button">
                     <div class="btn-left">
-                        <img src="<?php echo BETSPIN_DIR_URI . "/dist/img/explore.png" ?>" alt="explore icon">
+                        <img src="<?php echo BETSPIN_DIR_URI . "/dist/img/explore.png" ?>" width="24" height="24" alt="explore icon">
                     </div>
                     <div class="btn-right">
                         <a href="#live-roulette"> <i class="icon-down-open"></i> Take your seat</a>
