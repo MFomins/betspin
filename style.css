@@ -1169,17 +1169,20 @@ w .site-footer .footer-col a {
     background : #000000;
     background : -webkit-linear-gradient(to right, #434343, #000000);
     background : linear-gradient(to right, #434343, #000000);
-    padding    : 16rem 0 12rem;
+    background-image : url(dist/img/homepage-banner.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+
+    padding: 22rem 0 4rem;
     text-align : center;
     position   : relative;
     font-family: 'Bebas Neue', cursive;
 }
 
-@media (min-width:768px) {
-    .front-page-head {
-        background-image : url(dist/img/homepage-banner.jpg);
-        background-repeat: no-repeat;
-        background-size  : cover;
+@media(min-width:1450px) and (max-width:1920px){
+    .front-page-head { 
+        padding-top: 35rem;
     }
 }
 
