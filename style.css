@@ -3107,7 +3107,8 @@ column-gap: 30px;
 
 .sitemap-h1{
 	text-align: center;
-	color:	#202a5b;
+	color:	black;
+    padding-bottom: 10px;
 	}
 
 .sitemap-title{

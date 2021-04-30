@@ -5,6 +5,8 @@
 get_header(); 
 ?>
 <div class = "sitemap-body">    
+<h1 class="sitemap-h1"><?php the_title(); ?></h1>
+
     <div class = "body-row  container">
         <h2 class="sitemap-title" id="pages"><?php _e('Pages', 'betspin'); ?></h2>
         <ul>
