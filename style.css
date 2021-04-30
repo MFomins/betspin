@@ -1199,6 +1199,12 @@ w .site-footer .footer-col a {
     }
 }
 
+@media(max-width:600px){
+    .front-page-head {
+    background-image : url(dist/img/homepage-banner-mobile.jpg); 
+    }
+}
+
 .front-header {
     position: absolute;
 }
