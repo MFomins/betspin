@@ -1199,7 +1199,7 @@ w .site-footer .footer-col a {
     }
 }
 
-@media(max-width:600px){
+@media(max-width:599px){
     .front-page-head {
     background-image : url(dist/img/homepage-banner-mobile.jpg); 
     }
