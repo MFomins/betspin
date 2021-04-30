@@ -308,7 +308,7 @@ function payment_methods ()
         'has_archive' => false,
         'menu_icon' => 'dashicons-money',
         'supports' => array('title', 'editor', 'thumbnail'),
-        'rewrite' => array('slug' => 'ayment_methods'),
+        'rewrite' => array('slug' => 'payment_methods'),
     );
 
     register_post_type( 'payment_methods', $args);
