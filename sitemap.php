@@ -19,6 +19,7 @@ get_header();
     <!-- CPT sitemap -->
     <?php $post_types = get_post_types(['public' => true, '_builtin' => false], 'names', 'and'); ?> 
     <?php foreach ($post_types as $post_type): ?>
+        <?php $post_name = get_post_type_object($post_type); ?>
             <?php $postsLoop = new WP_Query([
                 'post_type' => $post_type,
                 'posts_per_page'=>'-1',
@@ -28,7 +29,7 @@ get_header();
             ]);?>
             <?php if($postsLoop->have_posts()) : ?>
               <div class = "body-row container">
-                <h2 class="sitemap-title"><?php _e($post_type, 'betspin'); ?></h2>
+                <h2 class="sitemap-title"><?php _e($post_name->labels->name, 'betspin'); ?></h2>
                 <ul>
                 <?php while ( $postsLoop->have_posts()): ?>
                     <?php $postsLoop->the_post();?>

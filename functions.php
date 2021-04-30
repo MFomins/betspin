@@ -99,7 +99,7 @@ function betspin_unregister_widgets()
 function betspin_scripts()
 {
     //Main stylesheet
-    wp_enqueue_style('betspin-main', get_stylesheet_uri(), array(), '1.0.59');
+    wp_enqueue_style('betspin-main', get_stylesheet_uri(), array(), '1.0.61');
 
     //Google font
     wp_enqueue_style('font', 'https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
