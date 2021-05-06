@@ -94,12 +94,61 @@ function betspin_unregister_widgets()
     unregister_widget('WP_Widget_Archives');
     unregister_widget('WP_Widget_Calendar');
 }
+//General settings
+function general_set_sitemap() {
+    //define the settings field
+    add_settings_field(
+        'sitemap_page_id',                      //The ID
+        'Please set sitemap',                   // the label for field
+        'sitemap_pages_dropdown',               //The callback function
+        'general'                               //the page
+    );
 
+    //register the footer_message setting the general section
+    register_setting(
+        'general',
+        'sitemap_page_id'
+    );
+}
+add_action('admin_init','general_set_sitemap');
+
+function sitemap_pages_dropdown() {
+    $selected_sitemap_id = get_option('sitemap_page_id');
+
+    wp_dropdown_pages(array(
+        'show_option_none' => 'none',
+        'name'             => 'sitemap_page_id',
+        'id'               => 'sitemap_page_id',
+        'selected'         => $selected_sitemap_id,
+    ));
+}
+
+//Delete transients
+add_action( 'wp_insert_post', 'delete_transient_on_save', 5,3 );
+add_action( 'save_post', 'delete_transient_on_save', 5,3 );
+add_action( 'edit_post', 'delete_cpt_transient_on_edit_delete', 5,2 );
+add_action( 'delete_post', 'delete_cpt_transient_on_edit_delete', 5,2 );
+
+function delete_transient_on_save( $post_id, $post, $update ) {
+    delete_cpt_transients( $post_id, $post ); 
+}
+function delete_cpt_transient_on_edit_delete($post_id, $post) {
+    delete_cpt_transients( $post_id, $post ); 
+}
+function delete_cpt_transients($post_id, $post ){
+    $selected_sitemap_id = get_option('sitemap_page_id');
+    if(function_exists('rocket_clean_post')){
+    rocket_clean_post((int)$selected_sitemap_id);
+    };
+    delete_transient( 'sitemap_'.$post->$post_type );
+}
+
+// http://localhost/Betspin/wp-admin/admin-post.php?action=purge_cache&type=url&_wp_http_referer=%2FBetspin%2Fsitemap%2F&_wpnonce=0015a09290
 //Add stylesheets and JS files
 function betspin_scripts()
 {
     //Main stylesheet
-    wp_enqueue_style('betspin-main', get_stylesheet_uri(), array(), '1.0.61');
+    wp_enqueue_style('betspin-main', get_stylesheet_uri(), array(), '1.0.62');
 
     //Google font
     wp_enqueue_style('font', 'https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
