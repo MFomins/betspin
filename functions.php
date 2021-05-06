@@ -139,11 +139,10 @@ function delete_cpt_transients($post_id, $post ){
     $selected_sitemap_id = get_option('sitemap_page_id');
     if(function_exists('rocket_clean_post')){
     rocket_clean_post((int)$selected_sitemap_id);
-    };
-    delete_transient( 'sitemap_'.$post->$post_type );
+    }    
+    delete_transient( 'sitemap_'.$post->post_type );
 }
 
-// http://localhost/Betspin/wp-admin/admin-post.php?action=purge_cache&type=url&_wp_http_referer=%2FBetspin%2Fsitemap%2F&_wpnonce=0015a09290
 //Add stylesheets and JS files
 function betspin_scripts()
 {
