@@ -2,7 +2,7 @@
 get_header();
 
 $title = get_field('blog_page_title', 'options') ?: 'Latest Casino News & Promotions ';
-$intro = get_field('blog_page_intro', 'options') ?: '';
+$intro = get_field('blog_page_intro', 'options');
 
 ?>
 
@@ -13,7 +13,11 @@ $intro = get_field('blog_page_intro', 'options') ?: '';
         </div>
 
         <h2><?php echo $title; ?></h2>
-        <p><?php echo $intro; ?></p>
+        <?php if ($intro) : ?>
+            <div class="news-intro">
+                <?php echo $intro; ?>
+            </div>
+        <?php endif; ?>
 
         <div class="all-news">
             <?php if (have_posts()) : ?>
@@ -26,7 +30,7 @@ $intro = get_field('blog_page_intro', 'options') ?: '';
                                 <?php the_title(); ?>
                             </h3>
                             <p class="news-date">
-                                <img src="<?php echo BETSPIN_DIR_URI . '/dist/img/calendar.png'; ?>" alt="Calendar"><?php echo get_the_date("d F Y"); ?>
+                                <img src="<?php echo BETSPIN_DIR_URI . '/dist/img/calendar.svg'; ?>" alt="Calendar"><?php echo get_the_date("d F Y"); ?>
                             </p>
                             <div class="news-read-more">
                                 <a href="<?php the_permalink(); ?>"><?php _e('Read more »', 'betspin-theme'); ?></a>
