@@ -8,9 +8,12 @@ $intro = get_field('blog_page_intro', 'options');
 
 <main class="container">
     <div class="page-content">
-        <div class="breadcrumbs">
-            <?php if (function_exists('rank_math_the_breadcrumbs')) rank_math_the_breadcrumbs(); ?>
-        </div>
+
+        <?php if (function_exists('rank_math_the_breadcrumbs')) : ?>
+            <div class="breadcrumbs">
+                <?php rank_math_the_breadcrumbs(); ?>
+            </div>
+        <?php endif; ?>
 
         <h2><?php echo $title; ?></h2>
         <?php if ($intro) : ?>
@@ -41,7 +44,11 @@ $intro = get_field('blog_page_intro', 'options');
             <?php else : ?>
                 <p><?php _e('There is no posts added to the page.', 'betspin-theme'); ?></p>
             <?php endif; ?>
-            <?php wp_pagenavi(); ?>
+            
+            <?php if (function_exists('wp_pagenavi')) : ?>
+                <?php wp_pagenavi(); ?>
+            <?php endif; ?>
+
         </div>
     </div>
 </main>
