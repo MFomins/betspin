@@ -1452,6 +1452,12 @@ w .site-footer .footer-col a {
     height : 230px;
 }
 
+.post-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .post-info-wrap .post-title {
     font-weight: 500;
     line-height: 1.8rem;
@@ -1501,6 +1507,8 @@ w .site-footer .footer-col a {
     padding-bottom: 1rem;
     text-transform: uppercase;
     letter-spacing: -1px;
+    font-size: 2rem;
+    font-weight: normal;
 }
 
 .post-related-posts h2::after {
