@@ -42,13 +42,13 @@ $author_instagram = get_field('betspin_author_instagram', 'user_' . $curauth_id)
                 </p>
                 <div class="author-footer-socials">
                     <?php if ($author_twitter) : ?>
-                        <img class="twitter-author-icon" height="20" width="20" src="<?php echo BETSPIN_DIR_URI . '/dist/img/twitter.png' ?>" alt="twitter-logo"></img></a>
+                        <img class="twitter-author-icon" height="20" width="20" src="<?php echo BETSPIN_DIR_URI . '/dist/img/twitter.svg' ?>" alt="twitter-logo"></img></a>
                     <?php endif; ?>
                     <?php if ($author_linkedin) : ?>
-                        <a href="<?php echo $author_linkedin; ?>"><img class="linked-author-icon" height="20" width="20" src="<?php echo BETSPIN_DIR_URI . '/dist/img/linkedin.png' ?>" alt="linkedin-logo"></img></a>
+                        <a href="<?php echo $author_linkedin; ?>"><img class="linked-author-icon" height="20" width="20" src="<?php echo BETSPIN_DIR_URI . '/dist/img/linkedin.svg' ?>" alt="linkedin-logo"></img></a>
                     <?php endif; ?>
                     <?php if ($author_instagram) : ?>
-                        <a href="<?php echo $author_instagram; ?>"><img class="inst-author-icon" height="20" width="20" src="<?php echo BETSPIN_DIR_URI . '/dist/img/inst.png' ?>" alt="instagram-logo"></img></a>
+                        <a href="<?php echo $author_instagram; ?>"><img class="inst-author-icon" height="20" width="20" src="<?php echo BETSPIN_DIR_URI . '/dist/img/instagram.svg' ?>" alt="instagram-logo"></img></a>
                     <?php endif; ?>
                 </div>
             </div>
