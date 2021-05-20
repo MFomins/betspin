@@ -68,14 +68,19 @@ $author_instagram = get_field('betspin_author_instagram', 'user_' . $curauth_id)
                 while ($loop->have_posts()) {
                     $loop->the_post();
             ?>
-                    <a href="<?php the_permalink(); ?>" class="author-single-post">
-                        <div class="work-title">
+                    <div class="author-single-post">
+                        <div class ="work-thumbnail">
+                            <?php the_post_thumbnail(); ?>
+                        </div>
+                        <a href="<?php the_permalink(); ?>">
+                        <div class ="work-title">
                             <?php the_title(); ?>
                         </div>
+                        </a>
                         <div class="work-date">
                             <?php the_date(); ?>
                         </div>
-                    </a>
+                </div>
             <?php
                 } // end while
             } // end if
