@@ -325,25 +325,6 @@ function betspin_generate_toc()
 
 add_shortcode('betspin_toc', 'betspin_generate_toc');
 
-function custom_hreflang_map()
-{
-    $map = '';
-    $map .= '<link rel="alternate" href="https://www.betspin.com/live-casinos/" hreflang="en" />' . "\n";
-    $map .= '<link rel="alternate" href="https://www.betspin.com/live-casinos/uk/" hreflang="en-GB" />' . "\n";
-    $map .= '<link rel="alternate" href="https://www.betspin.com/live-casinos/canada/" hreflang="en-CA" />' . "\n";
-    $map .= '<link rel="alternate" href="https://www.betspin.com/live-casinos/india/" hreflang="en-IN" />' . "\n";
-    $map .= '<link rel="alternate" href="https://www.betspin.com/live-casinos/malaysia/" hreflang="en-MY" />' . "\n";
-    $map .= '<link rel="alternate" href="https://www.betspin.com/live-casinos/indonesia/" hreflang="en-ID" />' . "\n";
-    $map .= '<link rel="alternate" href="https://www.betspin.com/live-casinos/south-africa/" hreflang="en-ZA" />' . "\n";
-    $map .= '<link rel="alternate" href="https://www.betspin.com/live-casinos/" hreflang="x-default" />' . "\n";
-
-    if (is_post_type_archive('casino-review') || is_single([429, 428, 427, 426, 425, 421])) {
-        echo $map;
-    }
-}
-
-add_action('wp_head', 'custom_hreflang_map', 1, 1);
-
 // add payment methods CPT
 function payment_methods ()
 {
@@ -353,7 +334,6 @@ function payment_methods ()
                 'name' => 'Payment methods',
                 'singular_name' => 'payment_method',
         ),
-        'show_ui' => true,
         'has_archive' => false,
         'menu_icon' => 'dashicons-money',
         'supports' => array('title', 'editor', 'thumbnail'),
@@ -374,7 +354,6 @@ function games_buttons ()
                 'name' => 'Games buttons',
                 'singular_name' => 'game_buttons',
         ),
-        'show_ui' => true,
         'has_archive' => false,
         'menu_icon' => 'dashicons-games',
         'supports' => array('title', 'editor', 'thumbnail'),
