@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-const pathname = "/wp-content/themes/betspin-theme/dist/img/";
+// REMEMBER TO CHANGE 
+const pathname = "/wp-content/themes/betspintheme/dist/img/";
 
 const MyCustomImage = data => {
     return <div className="logo-main">
@@ -39,6 +39,9 @@ const additionalElement = data => {
         </div>
         <div className="total-live-games">
             <span>{data.data.extra_fields.live_games}</span> live games
+        </div>
+        <div className="total-custom-rating">
+            <img src={pathname + "betspin-logo-popup.png"} alt="explore" className="explore"></img> 4
         </div>
     </div>
 };
