@@ -3240,16 +3240,16 @@ span.popup-title {
 }
 
 /* Blog Archive */
-.single-news {
+.single-news-article {
     display: flex;
     margin : 20px 0;
 }
 
-.single-news:nth-child(odd) {
+.single-news-article:nth-child(odd) {
     background-color: rgba(44, 62, 80, 0.1);
 }
 
-.single-news:nth-child(even) {
+.single-news-article:nth-child(even) {
     background-color: rgba(190, 30, 30, 0.1);
 }
 
@@ -3271,11 +3271,11 @@ span.popup-title {
     border-left    : 5px solid #fff;
 }
 
-.single-news .news-title {
+.single-news-article .news-title {
     font-size: 24px;
 }
 
-.single-news .news-date {
+.single-news-article .news-date {
     font-size  : 14px;
     font-weight: 300;
     display    : flex;
@@ -3298,7 +3298,7 @@ span.popup-title {
 }
 
 @media(max-width:767px) {
-    .single-news {
+    .single-news-article {
         flex-direction: column;
     }
 

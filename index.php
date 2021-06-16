@@ -1,8 +1,6 @@
 <?php
-get_header();
 
-$title = get_field('blog_page_title', 'options') ?: 'Latest Casino News & Promotions ';
-$intro = get_field('blog_page_intro', 'options');
+get_header();
 
 ?>
 
@@ -15,17 +13,10 @@ $intro = get_field('blog_page_intro', 'options');
             </div>
         <?php endif; ?>
 
-        <h2><?php echo $title; ?></h2>
-        <?php if ($intro) : ?>
-            <div class="news-intro">
-                <?php echo $intro; ?>
-            </div>
-        <?php endif; ?>
-
         <div class="all-news">
             <?php if (have_posts()) : ?>
                 <?php while (have_posts()) : the_post(); ?>
-                    <article class="single-news">
+                    <article class="single-news-article">
                         <div class="news-img" style="background-image:url(<?php the_post_thumbnail_url(); ?>)">
                         </div>
                         <div class="news-content">
