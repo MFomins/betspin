@@ -156,7 +156,7 @@ function delete_cpt_transients($post_id, $post)
 function betspin_scripts()
 {
     //Main stylesheet
-    wp_enqueue_style('betspin-main', get_stylesheet_uri(), array(), '1.0.65');
+    wp_enqueue_style('betspin-main', get_stylesheet_uri(), array(), '1.0.66');
 
     //Google font
     wp_enqueue_style('font', 'https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
