@@ -94,8 +94,10 @@ function betspin_unregister_widgets()
     unregister_widget('WP_Widget_Archives');
     unregister_widget('WP_Widget_Calendar');
 }
+
 //General settings
-function general_set_sitemap() {
+function general_set_sitemap()
+{
     //define the settings field
     add_settings_field(
         'sitemap_page_id',                      //The ID
@@ -110,44 +112,51 @@ function general_set_sitemap() {
         'sitemap_page_id'
     );
 }
-add_action('admin_init','general_set_sitemap');
 
-function sitemap_pages_dropdown() {
+add_action('admin_init', 'general_set_sitemap');
+
+function sitemap_pages_dropdown()
+{
     $selected_sitemap_id = get_option('sitemap_page_id');
 
     wp_dropdown_pages(array(
         'show_option_none' => 'none',
-        'name'             => 'sitemap_page_id',
-        'id'               => 'sitemap_page_id',
-        'selected'         => $selected_sitemap_id,
+        'name' => 'sitemap_page_id',
+        'id' => 'sitemap_page_id',
+        'selected' => $selected_sitemap_id,
     ));
 }
 
 //Delete transients
-add_action( 'wp_insert_post', 'delete_transient_on_save', 5,3 );
-add_action( 'save_post', 'delete_transient_on_save', 5,3 );
-add_action( 'edit_post', 'delete_cpt_transient_on_edit_delete', 5,2 );
-add_action( 'delete_post', 'delete_cpt_transient_on_edit_delete', 5,2 );
+add_action('wp_insert_post', 'delete_transient_on_save', 5, 3);
+add_action('save_post', 'delete_transient_on_save', 5, 3);
+add_action('edit_post', 'delete_cpt_transient_on_edit_delete', 5, 2);
+add_action('delete_post', 'delete_cpt_transient_on_edit_delete', 5, 2);
 
-function delete_transient_on_save( $post_id, $post, $update ) {
-    delete_cpt_transients( $post_id, $post ); 
+function delete_transient_on_save($post_id, $post, $update)
+{
+    delete_cpt_transients($post_id, $post);
 }
-function delete_cpt_transient_on_edit_delete($post_id, $post) {
-    delete_cpt_transients( $post_id, $post ); 
+
+function delete_cpt_transient_on_edit_delete($post_id, $post)
+{
+    delete_cpt_transients($post_id, $post);
 }
-function delete_cpt_transients($post_id, $post ){
+
+function delete_cpt_transients($post_id, $post)
+{
     $selected_sitemap_id = get_option('sitemap_page_id');
-    if(function_exists('rocket_clean_post')){
-    rocket_clean_post((int)$selected_sitemap_id);
-    }    
-    delete_transient( 'sitemap_'.$post->post_type );
+    if (function_exists('rocket_clean_post')) {
+        rocket_clean_post((int)$selected_sitemap_id);
+    }
+    delete_transient('sitemap_' . $post->post_type);
 }
 
 //Add stylesheets and JS files
 function betspin_scripts()
 {
     //Main stylesheet
-    wp_enqueue_style('betspin-main', get_stylesheet_uri(), array(), '1.0.65');
+    wp_enqueue_style('betspin-main', get_stylesheet_uri(), array(), '1.0.66');
 
     //Google font
     wp_enqueue_style('font', 'https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
@@ -213,6 +222,7 @@ function betspin_menu_arrow($item_output, $item, $depth, $args)
     }
     return $item_output;
 }
+
 add_filter('walker_nav_menu_start_el', 'betspin_menu_arrow', 10, 4);
 
 //Give different classes for different submenus
@@ -227,6 +237,7 @@ function custom_submenu_css_class($classes, $args, $depth)
     // ...
     return $classes;
 }
+
 add_filter('nav_menu_submenu_css_class', 'custom_submenu_css_class', 10, 3);
 
 //Custom excerpt lenght
@@ -240,6 +251,7 @@ function betspin_excerpt_more($more)
 {
     return '';
 }
+
 add_filter('excerpt_more', 'betspin_excerpt_more');
 
 /*=============================================
@@ -256,14 +268,15 @@ add_filter('wp_nav_menu_objects', 'betspin_nav_menu_objects', 10, 2);
 remove_filter('pre_user_description', 'wp_filter_kses');
 
 $payment_desc = get_field('payment_desc');
-function the_field_without_wpautop( $payment_desc ) {
-	
-	remove_filter('acf_the_content', 'wpautop');
-	
-	the_field( $payment_desc );
-	
-	add_filter('acf_the_content', 'wpautop');
-	
+function the_field_without_wpautop($payment_desc)
+{
+
+    remove_filter('acf_the_content', 'wpautop');
+
+    the_field($payment_desc);
+
+    add_filter('acf_the_content', 'wpautop');
+
 }
 
 /*=============================================
@@ -301,14 +314,18 @@ function site_popup()
 
 function betspin_socials()
 {
-?>
+    ?>
     <div class="footer-socials">
-        <a href="https://www.facebook.com/betspinofficial" target="_blank" rel="noopener"><img src="<?php echo BETSPIN_DIR_URI . '/dist/img/socials-facebook.png'; ?>" alt="facebook"></a>
-        <a href="https://www.youtube.com/channel/UC3Q1xwrFgEYbmo3ZQOXGpsw" target="_blank" rel="noopener"><img src="<?php echo BETSPIN_DIR_URI . '/dist/img/socials-youtube.png'; ?>" alt="youtube"></a>
-        <a href="https://twitter.com/betspinofficial" target="_blank" rel="noopener"><img src="<?php echo BETSPIN_DIR_URI . '/dist/img/socials-twitter.png'; ?>" alt="twitter"></a>
-        <a href="https://www.instagram.com/betspin_official/" target="_blank" rel="noopener"><img src="<?php echo BETSPIN_DIR_URI . '/dist/img/socials-instagram.png'; ?>" alt="instagram"></a>
+        <a href="https://www.facebook.com/betspinofficial" target="_blank" rel="noopener"><img
+                    src="<?php echo BETSPIN_DIR_URI . '/dist/img/socials-facebook.png'; ?>" alt="facebook"></a>
+        <a href="https://www.youtube.com/channel/UC3Q1xwrFgEYbmo3ZQOXGpsw" target="_blank" rel="noopener"><img
+                    src="<?php echo BETSPIN_DIR_URI . '/dist/img/socials-youtube.png'; ?>" alt="youtube"></a>
+        <a href="https://twitter.com/betspinofficial" target="_blank" rel="noopener"><img
+                    src="<?php echo BETSPIN_DIR_URI . '/dist/img/socials-twitter.png'; ?>" alt="twitter"></a>
+        <a href="https://www.instagram.com/betspin_official/" target="_blank" rel="noopener"><img
+                    src="<?php echo BETSPIN_DIR_URI . '/dist/img/socials-instagram.png'; ?>" alt="instagram"></a>
     </div>
-<?php
+    <?php
 }
 
 
@@ -326,13 +343,13 @@ function betspin_generate_toc()
 add_shortcode('betspin_toc', 'betspin_generate_toc');
 
 // add payment methods CPT
-function payment_methods ()
+function payment_methods()
 {
 
-    $args = array (
+    $args = array(
         'labels' => array(
-                'name' => 'Payment methods',
-                'singular_name' => 'payment_method',
+            'name' => 'Payment methods',
+            'singular_name' => 'payment_method',
         ),
         'show_ui' => true,
         'has_archive' => false,
@@ -341,19 +358,20 @@ function payment_methods ()
         'rewrite' => array('slug' => 'payment_methods'),
     );
 
-    register_post_type( 'payment_methods', $args);
+    register_post_type('payment_methods', $args);
 
 }
-add_action('init','payment_methods');
+
+add_action('init', 'payment_methods');
 
 // add payment methods CPT
-function games_buttons ()
+function games_buttons()
 {
 
-    $args = array (
+    $args = array(
         'labels' => array(
-                'name' => 'Games buttons',
-                'singular_name' => 'game_buttons',
+            'name' => 'Games buttons',
+            'singular_name' => 'game_buttons',
         ),
         'show_ui' => true,
         'has_archive' => false,
@@ -362,10 +380,11 @@ function games_buttons ()
         'rewrite' => array('slug' => 'games_buttons'),
     );
 
-    register_post_type( 'games_buttons', $args);
+    register_post_type('games_buttons', $args);
 
 }
-add_action('init','games_buttons');
+
+add_action('init', 'games_buttons');
 
 /**
  * Allow changing of the canonical URL.
@@ -390,4 +409,50 @@ function wpse183311_filter($atts, $item, $args)
     $atts['itemprop'] = 'url';
     return $atts;
 }
+
 add_filter('nav_menu_link_attributes', 'wpse183311_filter', 3, 10);
+
+// Add blog CPT
+function blog_register_cpt()
+{
+
+    $args = array(
+        'labels' => array(
+            'name' => 'Blog',
+        ),
+        'public' => true,
+        'show_ui' => true,
+        'has_archive' => false,
+        'menu_position' => 10,
+        'menu_icon' => 'dashicons-welcome-add-page',
+        'supports' => array('title', 'editor', 'thumbnail'),
+    );
+
+    register_post_type('blog', $args);
+
+}
+
+add_action('init', 'blog_register_cpt');
+
+// Add blog CPT
+function news_register_cpt()
+{
+
+    $args = array(
+        'labels' => array(
+            'name' => 'News',
+        ),
+        'public' => true,
+        'show_ui' => true,
+        'has_archive' => false,
+        'menu_position' => 10,
+        'menu_icon' => 'dashicons-welcome-add-page',
+        'supports' => array('title', 'editor', 'thumbnail'),
+    );
+
+    register_post_type('news', $args);
+
+}
+
+add_action('init', 'news_register_cpt');
+
